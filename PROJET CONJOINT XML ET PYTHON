@@ -1,0 +1,25 @@
+PROJET CONJOINT XML ET PYTHON
+
+Sujet: est-ce qu'il y a une correlation entre le lieux de tournage de tournages de films et la localisation des monuments/musees/jardins, etc?
+
+1. croiser des donnees de coordinates de monuments
+2. eliminer les monuments qui sont pas a paris
+(ajouter a la main des monuments qui sont pas dans la liste) 
+3. faire une carte des monuments et faire une marge de coordinates
+On donne un poids selon la hauteur du monument (par exemple, plus de poids a la tour eiffel parce qu'on peut la voir de loin)
+
+4. eliminer les films sans coordinates
+5. modeliser les donnees de coordinates (deux colonnes)
+6. faire une carte de tournage par monument
+
+7. puis si on a du temps, chercher d'autres correlations (directeur, genre, nationalité du film, etc). pour ça on doit chercher les infos sur une autre base de donnees sur les films (http://omdbapi.com/, https://www.themoviedb.org/, http://data.linkedmdb.org/page/film_location/8)
+
+You shall place the following notice prominently on your application: "This product uses the TMDb API but is not endorsed or certified by TMDb."
+
+http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/
+http://www.data.gouv.fr/fr/datasets/lieux-de-tournage-de-films-long-metrage-prs/
+https://www.data.gouv.fr/fr/datasets/monuments-historiques-francais-1/
+http://www.data.gouv.fr/fr/datasets/liste-des-coordonnees-gps-des-monuments-nationaux/
+
+
+
