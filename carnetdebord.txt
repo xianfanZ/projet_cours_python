@@ -1,0 +1,19 @@
+CARNET DE BORD
+
+10/11 - 16/11
+Réflexion à des sujets possibles et à des problèmes d'accès aux données (données bloquées, données payantes). 
+Décision de travailler avec des données libres d'accès et de droit.
+
+18/11
+Choix définitif du sujet. 
+Survol des données, apparition des premières hypothèses et proposition des problématiques à approfondir.
+Élaboration du premier plan de travail.
+
+23/11
+Récuperation des données d'entrée. 
+Choix des monuments à prendre en considération. 
+Création d'un dépot commun sur github. 
+
+30/11
+Amélioration de la documentation.
+Filtrage et merge des données des monuments. 
