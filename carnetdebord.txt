@@ -17,3 +17,23 @@ Création d'un dépot commun sur github.
 30/11
 Amélioration de la documentation.
 Filtrage et merge des données des monuments. 
+
+01/12
+
+07/12
+
+08/12
+
+14/11
+
+15/11
+Deadline XML ?
+
+
+04/01
+
+05/01
+Présentation en cours de XML.
+
+20/01
+Deadline Python.
