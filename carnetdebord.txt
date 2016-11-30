@@ -24,11 +24,12 @@ Filtrage et merge des données des monuments.
 
 08/12
 
-14/11
+14/12
 
-15/11
+15/12
+
+31/12
 Deadline XML ?
-
 
 04/01
 
