@@ -28,10 +28,20 @@ You shall place the following notice prominently on your application: "This prod
 
 
 MÉTHODES
-1. croiser des donnees de coordinates de monuments
-2. eliminer les monuments qui sont pas a paris
-(ajouter a la main des monuments qui sont pas dans la liste) 
-3. faire une carte des monuments et faire une marge de coordinates
+1. Préparer les données.
+A. les données sur les monuments
+téléchargé le fichier de monument en format Json et le traiter et rendre un fichier en format xml 
+	- croiser des données de coordinates de monuments
+	- trouver les coordinates des monuments qui ne sont pas dans le fichier qu’on a déjà téléchargé. S’il n’y en pas, il faut les ajouter manuellement.  
+	- éliminer les monuments qui sont pas a paris
+	- transformation en format geoJson
+	- transformation en XML(pour )
+	- établir la grammaire DTD et relaxng
+	- faire un tableau de monuments à partir de document xml(en xsl)
+B. les données pour les films.
+télécharger les données en xml
+	- éliminer les données qu’on n’a pas besoin 
+2. faire une carte des monuments et faire une marge de coordinates
 On donne un poids selon la hauteur du monument (par exemple, plus de poids a la tour eiffel parce qu'on peut la voir de loin)
 
 4. eliminer les films sans coordinates
@@ -44,6 +54,9 @@ On donne un poids selon la hauteur du monument (par exemple, plus de poids a la 
 IMPLÉMENTATION
 
 modelisation, modules, langages, APIs, etc
+
+
+
 
 
 
