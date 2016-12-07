@@ -19,7 +19,7 @@ Amélioration de la documentation.
 Filtrage et merge des données des monuments. 
 
 01/12
-
+Diviser la tâche
 07/12
 
 08/12
