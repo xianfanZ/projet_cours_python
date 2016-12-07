@@ -4,7 +4,8 @@ PROJET XML ET PYTHON
 SUJET
 Croisement des lieux de tournage de films et des monuments parisiens.
 
-Est-ce qu'il y a une correlation entre le lieux de tournage de tournages de films et la localisation des monuments parisiens ?
+Nous supposons que le choix d'un lieu de tournage à Paris peut être determiné par la présence d'un monument à proximité.
+Dans ce cas, il y aura une correlation de covariation entre les coordonnées des lieux de tournages de films et les coordonnées des monuments parisiens.
 
 
 OBJECTIFS
@@ -28,6 +29,7 @@ You shall place the following notice prominently on your application: "This prod
 
 
 MÉTHODES
+<<<<<<< HEAD
 1. Préparer les données.
 A. les données sur les monuments
 téléchargé le fichier de monument en format Json et le traiter et rendre un fichier en format xml 
@@ -42,6 +44,12 @@ B. les données pour les films.
 télécharger les données en xml
 	- éliminer les données qu’on n’a pas besoin 
 2. faire une carte des monuments et faire une marge de coordinates
+=======
+1. croiser des donnees de coordinates de monuments
+2. eliminer les monuments qui sont pas a paris
+(ajouter a la main des monuments qui sont pas dans la liste) 
+3. faire une carte des monuments et établir une marge de coordinates
+>>>>>>> dec01e8ce8a51139d389a5021d2ecdc9c86a8333
 On donne un poids selon la hauteur du monument (par exemple, plus de poids a la tour eiffel parce qu'on peut la voir de loin)
 
 4. eliminer les films sans coordinates
