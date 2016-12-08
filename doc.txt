@@ -47,13 +47,13 @@ télécharger les données en xml
 	- établir la grammaire DTD et relaxng à partir du fichier xml modifié
 	- transformation en geoJson
 
-2. projection des donées sur la carte à travers un programme en python
+2. projection des données sur la carte à travers un programme en python
 A. les données des monuments 
-	- projecter les coordonnées des monuments dans une carte
+	- projeter les coordonnées des monuments dans une carte
 	- faire une marge pour tous les monuments
 B. les données des films
-	- projecter les coordonnées des films dans la carte.
-C. revoir la marge et la modifié (optionel)
+	- projeter les coordonnées des films dans la carte.
+C. revoir la marge et la modifié (optionnel)
 
 3. faire une carte de tournage de films pour chaque année.
 	- filtrer les coordonnées de tournage en fonction de l'année
