@@ -7,10 +7,9 @@ Cimetière du Père Lachaise
 Grand Palais
 Hôtel de Ville
 Invalides
-Jardin des plantes
-Jardin des Tuileries
+Jardin des Plantes
 Jardin du Luxembourg
-Le Louvre
+Musée du Louvre
 Musée d'Orsay
 Notre Dame de Paris
 Opéra Garnier
@@ -22,24 +21,15 @@ Place Vendôme
 Pont des Arts
 Pont Neuf
 Tour Eiffel
-Trocadéro
-Eglise Saint Sulpice
-Hôtel Matignon
-Bercy Village
 Café de Flore
-Bois de Boulogne
-Bois de Vincennes
 Canal Saint Martin
-Cité des Sciences
-Domaine National de Saint Cloud
 Gare de Lyon de Paris
-Marché de Rungis
 Moulin Rouge
-Musée national d'histoire naturelle
 Place de la Bastille
 Place des Vosges
 Sacré Coeur
-Tour saint Jacques
+Tour Saint Jacques
 Tour Montparnasse
 Université la Sorbonne Paris
-La status de la Liberté
+La statue de la Liberté
+Bibliothèque François Mitterrand
