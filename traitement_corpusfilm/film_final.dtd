@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT tournages (item)>
+<!ELEMENT item (Titre, Realisateur, Date_Debut_Evenement, Date_Fin_Evenement, Cadre, Lieu, Adresse, Arrondissement, Adresse_complete, geo1, geo2)>
+<!ELEMENT Titre (#PCDATA)>
+<!ELEMENT Realisateur (#PCDATA)>
+<!ELEMENT Date_Debut_Evenement (#PCDATA)>
+<!ELEMENT Date_Fin_Evenement (#PCDATA)>
+<!ELEMENT Cadre (#PCDATA)>
+<!ELEMENT Lieu (#PCDATA)>
+<!ELEMENT Adresse (#PCDATA)>
+<!ELEMENT Arrondissement (#PCDATA)>
+<!ELEMENT Adresse_complete (#PCDATA)>
+<!ELEMENT geo1 (#PCDATA)>
+<!ELEMENT geo2 (#PCDATA)>
