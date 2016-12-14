@@ -16,15 +16,18 @@ Création d'un dépot commun sur github.
 
 30/11
 Amélioration de la documentation.
-Filtrage et merge des données des monuments. 
 
 01/12
-Diviser la tâche
+Amélioration de la documentation.
+
 07/12
+Nettoyage liste de monuments (sélection des lieux pertinents, élimination des lieux qui ne sont pas intramuros, etc). 
 
 08/12
+Script de nettoyage de monumets sans geo-coordonnées ('enlever_sans_coord_film.py').
 
 14/12
+Script de modélisation des geo-coordonnées en deux elements différents ('modelis_coor_film.py').
 
 15/12
 
