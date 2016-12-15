@@ -1,0 +1,81 @@
+PROJET XML ET PYTHON
+
+
+SUJET
+Croisement des lieux de tournage de films et des monuments parisiens.
+
+Nous supposons que le choix d'un lieu de tournage à Paris peut être determiné par la présence d'un monument à proximité.
+Dans ce cas, il y aura une correlation de covariation entre les coordonnées des lieux de tournages de films et les coordonnées des monuments parisiens.
+
+
+OBJECTIFS
+
+
+DONNÉES 
+
+- Sources :
+
+http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/
+http://www.data.gouv.fr/fr/datasets/lieux-de-tournage-de-films-long-metrage-prs/
+https://www.data.gouv.fr/fr/datasets/monuments-historiques-francais-1/
+http://www.data.gouv.fr/fr/datasets/liste-des-coordonnees-gps-des-monuments-nationaux/
+
+- format
+- statut juridique
+
+You shall place the following notice prominently on your application: "This product uses the TMDb API but is not endorsed or certified by TMDb." 
+
+- traitements
+
+
+MÉTHODES
+<<<<<<< HEAD
+1. Préparer les données.
+A. les données sur les monuments
+téléchargé le fichier de monument en format Json et le traiter et rendre un fichier en format xml 
+	- croiser des données de coordinates de monuments
+	- trouver les coordinates des monuments qui ne sont pas dans le fichier qu’on a déjà téléchargé. S’il n’y en pas, il faut les ajouter manuellement.  
+	- éliminer les monuments qui sont pas a paris
+	- transformation en format geoJson
+	- transformation en XML
+	- établir la grammaire DTD et relaxng
+	- faire un tableau de monuments à partir de document xml(en xsl)
+B. les données pour les films.
+télécharger les données en xml
+	- éliminer les films qui n'ont pas d'informations de coordonées
+	- diviser les données de coordonnées aux deux valeurs différentes
+	- établir la grammaire DTD et relaxng à partir du fichier xml modifié
+	- transformation en geoJson
+
+2. projection des données sur la carte à travers un programme en python
+A. les données des monuments 
+	- projeter les coordonnées des monuments dans une carte
+	- faire une marge pour tous les monuments
+B. les données des films
+	- projeter les coordonnées des films dans la carte.
+C. revoir la marge et la modifié (optionnel)
+
+3. faire une carte de tournage de films pour chaque année.
+	- filtrer les coordonnées de tournage en fonction de l'année
+	- reprendre le programme de la projection
+	- faire une animation de l'évolution (optionnel)
+
+4. démontrer le projet dans un site en format xml(optionnel).
+
+5. puis si on a du temps, chercher d'autres correlations (directeur, genre, nationalité du film, etc). pour ça on doit chercher les infos sur une autre base de donnees sur les films (http://omdbapi.com/, https://www.themoviedb.org/, http://data.linkedmdb.org/page/film_location/8)
+
+
+IMPLÉMENTATION
+
+modelisation, modules, langages, APIs, etc
+
+
+
+
+
+
+
+
+
+
+
