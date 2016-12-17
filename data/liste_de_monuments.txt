@@ -1,5 +1,3 @@
-#liste de monument sur http://monumentsdeparis.net/
-
 Arc de Triomphe
 Bibliothèque François Mitterrand
 Café de Flore
