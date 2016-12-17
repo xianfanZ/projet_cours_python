@@ -23,18 +23,3 @@ def json_film(file_name):
 	#write_in_file_json(list_json)
 #json_film("/Users/wangyizhe/Desktop/projetPy/film_final.xml")
 
-
-
-def geo_json():
-
-	geo_json = {
-	"type" : "Circle",
-	"coordinates": coor,
-	"radius" : 0.5,
-	"properties": properties
-	}
-	print geo_json
-
-def parser_json():
-	f = file("/Users/wangyizhe/Desktop/projetPy/film.json")
-	
