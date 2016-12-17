@@ -21,5 +21,5 @@ def json_film(file_name):
 			dic_film[child_tag] = chilld_text
 		list_json.append(dic_film)
 	#write_in_file_json(list_json)
-#json_film("/Users/wangyizhe/Desktop/projetPy/film_final.xml")
+json_film("film_final.xml")
 

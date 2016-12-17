@@ -3,8 +3,8 @@
 from lxml import etree
 
 def delet_deo_vide():
-	file = "/Users/wangyizhe/Desktop/projetPy/film_changed.xml"
-	tree = etree.parse("/Users/wangyizhe/Desktop/projetPy/film2011.xml")
+	file = "film_changed.xml"
+	tree = etree.parse("film2011.xml")
 	node_geos = tree.xpath("/tournagesdefilmsparis2011/film/geo_coordinates")
 	for node_geo in node_geos:
 		if node_geo.text == None:
@@ -18,8 +18,8 @@ def delet_deo_vide():
 
 def separat_geo():
 	delet_deo_vide()
-	file_xml_final = "/Users/wangyizhe/Desktop/projetPy/film_final.xml"
-	tree = etree.parse("/Users/wangyizhe/Desktop/projetPy/film_changed.xml")
+	file_xml_final = "film_final.xml"
+	tree = etree.parse("film_changed.xml")
 	node_geos = tree.xpath("/tournagesdefilmsparis2011/film/geo_coordinates")
 	for node_geo in node_geos:
 		geo1, geo2 = node_geo.text.split(",")

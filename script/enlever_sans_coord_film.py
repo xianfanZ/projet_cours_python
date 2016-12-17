@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from lxml import etree
-file = "/Users/wangyizhe/Desktop/projetPy/film_changed.xml"
-tree = etree.parse("/Users/wangyizhe/Desktop/projetPy/film2011.xml")
+file = "film_changed.xml"
+tree = etree.parse("film2011.xml")
 node_geos = tree.xpath("/tournagesdefilmsparis2011/film/geo_coordinates")
 for node_geo in node_geos:
 	if node_geo.text == None:
