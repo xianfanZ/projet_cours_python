@@ -3,10 +3,17 @@
     xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
     datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
 
-    <define name="tournages">
-        <element name="tournages">
+    <define name="tournagesdefilmsparis2011">
+        <element name="tournagesdefilmsparis2011">
+            <oneOrMore>
+                <ref name="film"/>
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="film">
+        <element name="film">
             <group>
-                <ref name="att.item"/>
                 <ref name="Titre"/>
                 <ref name="Realisateur"/>
                 <ref name="Date_Debut_Evenement"/>
@@ -22,7 +29,6 @@
         </element>
     </define>
 
-
     <define name="Titre">
         <element name="Titre">
             <text/>
@@ -37,13 +43,13 @@
 
     <define name="Date_Debut_Evenement">
         <element name="Date_Debut_Evenement">
-            <text/>
+            <data type="date"/>
         </element>
     </define>
 
     <define name="Date_Fin_Evenement">
         <element name="Date_Fin_Evenement">
-            <text/>
+            <data type="date"/>
         </element>
     </define>
 
@@ -79,18 +85,18 @@
 
     <define name="geo1">
         <element name="geo1">
-                <text/>
+            <data type="decimal"/>
         </element>
     </define>
     
     <define name="geo2">
         <element name="geo2">
-            <text/>
+            <data type="decimal"/>
         </element>
     </define>
 
     <start>
-        <ref name="tournages"/>
+        <ref name="tournagesdefilmsparis2011"/>
     </start>
     
 </grammar>
