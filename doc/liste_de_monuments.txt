@@ -1,35 +1,35 @@
 #liste de monument sur http://monumentsdeparis.net/
 
-Arc de triomphe
+Arc de Triomphe
+Bibliothèque François Mitterrand
+Café de Flore
+Canal Saint Martin
 Centre Pompidou
 Champs Elysées
 Cimetière du Père Lachaise
+Gare de Lyon de Paris
 Grand Palais
 Hôtel de Ville
 Invalides
 Jardin des Plantes
 Jardin du Luxembourg
-Musée du Louvre
+La Statue de la Liberté
+Moulin Rouge
 Musée d'Orsay
-Notre Dame de Paris
+Musée du Louvre
+Notre-Dame de Paris
 Opéra Garnier
 Palais de l'Élysée
 Palais Royal
 Panthéon
+Place de la Bastille
 Place de la Concorde
+Place des Vosges
 Place Vendôme
 Pont des Arts
 Pont Neuf
+Sacré-Coeur
 Tour Eiffel
-Café de Flore
-Canal Saint Martin
-Gare de Lyon de Paris
-Moulin Rouge
-Place de la Bastille
-Place des Vosges
-Sacré Coeur
-Tour Saint Jacques
 Tour Montparnasse
+Tour Saint Jacques
 Université la Sorbonne Paris
-La statue de la Liberté
-Bibliothèque François Mitterrand
