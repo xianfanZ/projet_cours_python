@@ -32,8 +32,11 @@ Script de modélisation des geo-coordonnées en deux elements différents ('mode
 15/12
 Architecture du projet.
 Transformation du xml des films en json. Quelle structure des données choisir ?
-Nettoyage fichiers géolocalisation des monuments (élimination de ceux qui sont pas dans notre liste). Merge des informations des fichiers des monuments. Ajout manuel géolocalisation des monuments dont on n'a pas les coordonnées. 
+Nettoyage fichiers géolocalisation des monuments (problèmes encodage fichier monuments.json, traitement du contenu textuel monuments.odt).
 
+17/12
+Abandon de l'obtention des géocoordonnées des monuments à partir de monuments.json et monuments.odt 
+(plus de la moitié des monuments ne sont pas présents!). Obtention des coordonnées de tous les monuments avec geopy (script 'traite_monuments.py', résultat 'monuments_coord.geojson').
 
 04/01
 
