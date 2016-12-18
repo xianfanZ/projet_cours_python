@@ -35,8 +35,8 @@ def extract_coord(listemon):
 			sortie.write( "\"geometry\": { " )
 			sortie.write( "\"type\": \"Point\"," )
 			sortie.write( "\"coordinates\": "+ str([location.latitude, location.longitude] )+"}," )
-			sortie.write( "\"properties: {" )
-			sortie.write( "\"name\": \""+monument+"\"} }," )
+			sortie.write( "\"properties\": {" )
+			sortie.write( "\"name\": \""+monument+"\"} }, " )
 		sortie.write("]")
 
 
