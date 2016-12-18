@@ -1,0 +1,960 @@
+
+        <!DOCTYPE html>
+        <head>
+            
+        
+            <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.min.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster-src.js"></script>
+        
+        
+        
+            
+        
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/leaflet.markercluster.js"></script>
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.Default.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/0.4.0/MarkerCluster.css" />
+        
+        
+        
+            
+        
+            <link rel="stylesheet" href="https://raw.githubusercontent.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css" />
+        
+        
+        
+            
+            <style>
+
+            html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+                }
+
+            #map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+            
+        
+            
+            <style> #map_377ec2aa442340f2aa071602a8ea46f5 {
+                position : relative;
+                width : 100.0%;
+                height: 100.0%;
+                left: 0.0%;
+                top: 0.0%;
+                }
+            </style>
+        
+        
+        
+        </head>
+        <body>
+            
+        
+            
+            <div class="folium-map" id="map_377ec2aa442340f2aa071602a8ea46f5" ></div>
+        
+        
+        
+        </body>
+        <script>
+            
+        
+            
+
+            var southWest = L.latLng(-90, -180);
+            var northEast = L.latLng(90, 180);
+            var bounds = L.latLngBounds(southWest, northEast);
+
+            var map_377ec2aa442340f2aa071602a8ea46f5 = L.map('map_377ec2aa442340f2aa071602a8ea46f5', {
+                                           center:[48.8737791,2.29503722603767],
+                                           zoom: 10,
+                                           maxBounds: bounds,
+                                           layers: [],
+                                           crs: L.CRS.EPSG3857
+                                         });
+            
+        
+        
+            
+            var tile_layer_bd6c37e8dffc4be8b9d2d778d167e5a8 = L.tileLayer(
+                'https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+                {
+                    maxZoom: 18,
+                    minZoom: 1,
+                    attribution: 'Data by <a href="http://openstreetmap.org">OpenStreetMap</a>, under <a href="http://www.openstreetmap.org/copyright">ODbL</a>.',
+                    detectRetina: false
+                    }
+                ).addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+
+        
+        
+            
+
+            var marker_2d37918f5aeb4699926174e25307477b = L.marker(
+                [48.8737791,2.29503722603767,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_41f7f8c6e7d44395a4ee622295ad9e71 = L.popup({maxWidth: '300'});
+
+            
+                var html_97248a0bd5ab42e28c33571be769f794 = $('         <div id="html_97248a0bd5ab42e28c33571be769f794"                 style="width: 100.0%; height: 100.0%;">                 Arc de Triomphe</div>                 ')[0];
+                popup_41f7f8c6e7d44395a4ee622295ad9e71.setContent(html_97248a0bd5ab42e28c33571be769f794);
+            
+
+            marker_2d37918f5aeb4699926174e25307477b.bindPopup(popup_41f7f8c6e7d44395a4ee622295ad9e71);
+
+            
+        
+        
+            
+
+            var marker_d51a590861194dafa6c20a65a52679ae = L.marker(
+                [48.8297207,2.3770491,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_ef9041337bb1482e96198af970f62110 = L.popup({maxWidth: '300'});
+
+            
+                var html_19ff9129ce3b4f5b8e3f0dbdfebc12c3 = $('         <div id="html_19ff9129ce3b4f5b8e3f0dbdfebc12c3"                 style="width: 100.0%; height: 100.0%;">                 Bibliothèque François Mitterrand</div>                 ')[0];
+                popup_ef9041337bb1482e96198af970f62110.setContent(html_19ff9129ce3b4f5b8e3f0dbdfebc12c3);
+            
+
+            marker_d51a590861194dafa6c20a65a52679ae.bindPopup(popup_ef9041337bb1482e96198af970f62110);
+
+            
+        
+        
+            
+
+            var marker_501d9fc5a71847e783070a5fccbf3614 = L.marker(
+                [48.8541444,2.3326307,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_c19669e3ffe9407cb9d180899d92f2ea = L.popup({maxWidth: '300'});
+
+            
+                var html_91cd8a1e0ea2429a88654040d0514307 = $('         <div id="html_91cd8a1e0ea2429a88654040d0514307"                 style="width: 100.0%; height: 100.0%;">                 Café de Flore</div>                 ')[0];
+                popup_c19669e3ffe9407cb9d180899d92f2ea.setContent(html_91cd8a1e0ea2429a88654040d0514307);
+            
+
+            marker_501d9fc5a71847e783070a5fccbf3614.bindPopup(popup_c19669e3ffe9407cb9d180899d92f2ea);
+
+            
+        
+        
+            
+
+            var marker_066f7d79c09b42749d69149e5c9f2743 = L.marker(
+                [48.8730184,2.3639951,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_64ff7a0aab45461087545b42aba5b197 = L.popup({maxWidth: '300'});
+
+            
+                var html_66843d7b63c64f9e813e8991d3b24188 = $('         <div id="html_66843d7b63c64f9e813e8991d3b24188"                 style="width: 100.0%; height: 100.0%;">                 Canal Saint Martin</div>                 ')[0];
+                popup_64ff7a0aab45461087545b42aba5b197.setContent(html_66843d7b63c64f9e813e8991d3b24188);
+            
+
+            marker_066f7d79c09b42749d69149e5c9f2743.bindPopup(popup_64ff7a0aab45461087545b42aba5b197);
+
+            
+        
+        
+            
+
+            var marker_588404f92b3446e791bc0a3c7a7229e0 = L.marker(
+                [48.8605918,2.35247431766534,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_3f7cf577a8254a30b8f5820148296a39 = L.popup({maxWidth: '300'});
+
+            
+                var html_b0534c68f45c497ea8d1e539517013b2 = $('         <div id="html_b0534c68f45c497ea8d1e539517013b2"                 style="width: 100.0%; height: 100.0%;">                 Centre Pompidou</div>                 ')[0];
+                popup_3f7cf577a8254a30b8f5820148296a39.setContent(html_b0534c68f45c497ea8d1e539517013b2);
+            
+
+            marker_588404f92b3446e791bc0a3c7a7229e0.bindPopup(popup_3f7cf577a8254a30b8f5820148296a39);
+
+            
+        
+        
+            
+
+            var marker_319e493810564df5b412ce87a6850574 = L.marker(
+                [48.8707573,2.3053312,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_895995d825ad467da6598b421ad9550b = L.popup({maxWidth: '300'});
+
+            
+                var html_f5bd4dbed6144d0597d095ff15dedb2a = $('         <div id="html_f5bd4dbed6144d0597d095ff15dedb2a"                 style="width: 100.0%; height: 100.0%;">                 Champs Elysées</div>                 ')[0];
+                popup_895995d825ad467da6598b421ad9550b.setContent(html_f5bd4dbed6144d0597d095ff15dedb2a);
+            
+
+            marker_319e493810564df5b412ce87a6850574.bindPopup(popup_895995d825ad467da6598b421ad9550b);
+
+            
+        
+        
+            
+
+            var marker_8871164c4d1b4ddc82c832aaaa14a2fd = L.marker(
+                [48.8612168,2.39391214989343,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_e9abed858e8846bd98f1acf7b362858c = L.popup({maxWidth: '300'});
+
+            
+                var html_850f4f5e24ee4bcabf8f64e37c5cd3ce = $('         <div id="html_850f4f5e24ee4bcabf8f64e37c5cd3ce"                 style="width: 100.0%; height: 100.0%;">                 Cimetière du Père Lachaise</div>                 ')[0];
+                popup_e9abed858e8846bd98f1acf7b362858c.setContent(html_850f4f5e24ee4bcabf8f64e37c5cd3ce);
+            
+
+            marker_8871164c4d1b4ddc82c832aaaa14a2fd.bindPopup(popup_e9abed858e8846bd98f1acf7b362858c);
+
+            
+        
+        
+            
+
+            var marker_b0a430b4f5f149268bd715a958c4ab71 = L.marker(
+                [48.8448057,2.3734794,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_3f1aa34c49464df3bebf7e0741120b56 = L.popup({maxWidth: '300'});
+
+            
+                var html_39366e2a3ff94ad08b008aba184c82b6 = $('         <div id="html_39366e2a3ff94ad08b008aba184c82b6"                 style="width: 100.0%; height: 100.0%;">                 Gare de Lyon de Paris</div>                 ')[0];
+                popup_3f1aa34c49464df3bebf7e0741120b56.setContent(html_39366e2a3ff94ad08b008aba184c82b6);
+            
+
+            marker_b0a430b4f5f149268bd715a958c4ab71.bindPopup(popup_3f1aa34c49464df3bebf7e0741120b56);
+
+            
+        
+        
+            
+
+            var marker_b7e3843d7dac482bafb73113dd268f31 = L.marker(
+                [48.86616135,2.31222295966943,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_2e6f0928dea149ecbdaa053c94fcf932 = L.popup({maxWidth: '300'});
+
+            
+                var html_676733c3c7554d1b894b23a4dfab2bf7 = $('         <div id="html_676733c3c7554d1b894b23a4dfab2bf7"                 style="width: 100.0%; height: 100.0%;">                 Grand Palais</div>                 ')[0];
+                popup_2e6f0928dea149ecbdaa053c94fcf932.setContent(html_676733c3c7554d1b894b23a4dfab2bf7);
+            
+
+            marker_b7e3843d7dac482bafb73113dd268f31.bindPopup(popup_2e6f0928dea149ecbdaa053c94fcf932);
+
+            
+        
+        
+            
+
+            var marker_9ac46d0848964d338de9184de016992c = L.marker(
+                [43.9493077,4.80540100174125,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_6c84cccfe8a54a0f9b33ca8c487d2817 = L.popup({maxWidth: '300'});
+
+            
+                var html_73b9b27a014d421eb83c564afa97e741 = $('         <div id="html_73b9b27a014d421eb83c564afa97e741"                 style="width: 100.0%; height: 100.0%;">                 Hôtel de Ville</div>                 ')[0];
+                popup_6c84cccfe8a54a0f9b33ca8c487d2817.setContent(html_73b9b27a014d421eb83c564afa97e741);
+            
+
+            marker_9ac46d0848964d338de9184de016992c.bindPopup(popup_6c84cccfe8a54a0f9b33ca8c487d2817);
+
+            
+        
+        
+            
+
+            var marker_f0765844bb6d4cc3866526c34f1bfdad = L.marker(
+                [48.8608923,2.3144984,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_f980f1212664492d87943808a8e797c4 = L.popup({maxWidth: '300'});
+
+            
+                var html_f0092ce3528c4105b6750f4df8204b06 = $('         <div id="html_f0092ce3528c4105b6750f4df8204b06"                 style="width: 100.0%; height: 100.0%;">                 Invalides</div>                 ')[0];
+                popup_f980f1212664492d87943808a8e797c4.setContent(html_f0092ce3528c4105b6750f4df8204b06);
+            
+
+            marker_f0765844bb6d4cc3866526c34f1bfdad.bindPopup(popup_f980f1212664492d87943808a8e797c4);
+
+            
+        
+        
+            
+
+            var marker_c176a89510bf4aefa915a5c337604ff1 = L.marker(
+                [48.8432224,2.35950895709484,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_63725e1b915b4e54bc9c446ca0cca04e = L.popup({maxWidth: '300'});
+
+            
+                var html_e469a4eb62d6467d9ab70e3b956cefee = $('         <div id="html_e469a4eb62d6467d9ab70e3b956cefee"                 style="width: 100.0%; height: 100.0%;">                 Jardin des Plantes</div>                 ')[0];
+                popup_63725e1b915b4e54bc9c446ca0cca04e.setContent(html_e469a4eb62d6467d9ab70e3b956cefee);
+            
+
+            marker_c176a89510bf4aefa915a5c337604ff1.bindPopup(popup_63725e1b915b4e54bc9c446ca0cca04e);
+
+            
+        
+        
+            
+
+            var marker_ba56123113dc4d1b98a3da8219c67a25 = L.marker(
+                [48.84672285,2.33641303020225,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_2afe99210a654210986a3a7a18243ceb = L.popup({maxWidth: '300'});
+
+            
+                var html_ba48409029e34885bf89c4280ccd22c1 = $('         <div id="html_ba48409029e34885bf89c4280ccd22c1"                 style="width: 100.0%; height: 100.0%;">                 Jardin du Luxembourg</div>                 ')[0];
+                popup_2afe99210a654210986a3a7a18243ceb.setContent(html_ba48409029e34885bf89c4280ccd22c1);
+            
+
+            marker_ba56123113dc4d1b98a3da8219c67a25.bindPopup(popup_2afe99210a654210986a3a7a18243ceb);
+
+            
+        
+        
+            
+
+            var marker_db9b1a1249b24b779fb8035ee5a85d82 = L.marker(
+                [46.5856963,0.3428935,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_19c72e453d08485cb09fe7fbe7d383ea = L.popup({maxWidth: '300'});
+
+            
+                var html_cc58c487c5034651b05626f361705a5a = $('         <div id="html_cc58c487c5034651b05626f361705a5a"                 style="width: 100.0%; height: 100.0%;">                 La Statue de la Liberté</div>                 ')[0];
+                popup_19c72e453d08485cb09fe7fbe7d383ea.setContent(html_cc58c487c5034651b05626f361705a5a);
+            
+
+            marker_db9b1a1249b24b779fb8035ee5a85d82.bindPopup(popup_19c72e453d08485cb09fe7fbe7d383ea);
+
+            
+        
+        
+            
+
+            var marker_e31013b0106a490a88d2c47476f46181 = L.marker(
+                [48.8840787,2.3324082,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_944c47f99c304bff905234887eadbe7b = L.popup({maxWidth: '300'});
+
+            
+                var html_c5b5b846fed74fd08860c27ffcf2bb05 = $('         <div id="html_c5b5b846fed74fd08860c27ffcf2bb05"                 style="width: 100.0%; height: 100.0%;">                 Moulin Rouge</div>                 ')[0];
+                popup_944c47f99c304bff905234887eadbe7b.setContent(html_c5b5b846fed74fd08860c27ffcf2bb05);
+            
+
+            marker_e31013b0106a490a88d2c47476f46181.bindPopup(popup_944c47f99c304bff905234887eadbe7b);
+
+            
+        
+        
+            
+
+            var marker_bd20f13344624cfe8e79cc91e3b89261 = L.marker(
+                [48.85991785,2.32658283469656,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_9700dd0366ab4971b24d549ef56ca810 = L.popup({maxWidth: '300'});
+
+            
+                var html_77a1fa1be13643fa9534faced0655da2 = $('         <div id="html_77a1fa1be13643fa9534faced0655da2"                 style="width: 100.0%; height: 100.0%;">                 Musée d&#39;Orsay</div>                 ')[0];
+                popup_9700dd0366ab4971b24d549ef56ca810.setContent(html_77a1fa1be13643fa9534faced0655da2);
+            
+
+            marker_bd20f13344624cfe8e79cc91e3b89261.bindPopup(popup_9700dd0366ab4971b24d549ef56ca810);
+
+            
+        
+        
+            
+
+            var marker_10c846beed794410b1eb3b870662eecf = L.marker(
+                [48.8608465,2.3335749,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_2187ab6e9c41477797ee49d43dcd2de3 = L.popup({maxWidth: '300'});
+
+            
+                var html_d6eae3b213d740bab82aa6463c7708df = $('         <div id="html_d6eae3b213d740bab82aa6463c7708df"                 style="width: 100.0%; height: 100.0%;">                 Musée du Louvre</div>                 ')[0];
+                popup_2187ab6e9c41477797ee49d43dcd2de3.setContent(html_d6eae3b213d740bab82aa6463c7708df);
+            
+
+            marker_10c846beed794410b1eb3b870662eecf.bindPopup(popup_2187ab6e9c41477797ee49d43dcd2de3);
+
+            
+        
+        
+            
+
+            var marker_470ad5c4b9a04cad84a1be5f6f216b6b = L.marker(
+                [48.85293695,2.35005149954546,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_63c4428160354917909b15cd8c1dc000 = L.popup({maxWidth: '300'});
+
+            
+                var html_3bb35742c8984891b360d7333d6b00aa = $('         <div id="html_3bb35742c8984891b360d7333d6b00aa"                 style="width: 100.0%; height: 100.0%;">                 Notre-Dame de Paris</div>                 ')[0];
+                popup_63c4428160354917909b15cd8c1dc000.setContent(html_3bb35742c8984891b360d7333d6b00aa);
+            
+
+            marker_470ad5c4b9a04cad84a1be5f6f216b6b.bindPopup(popup_63c4428160354917909b15cd8c1dc000);
+
+            
+        
+        
+            
+
+            var marker_17d4907b987a46a394084141d1eefb33 = L.marker(
+                [48.87203085,2.3317901855896,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_8a6405b7bdf947eea98a0e397e9b49b6 = L.popup({maxWidth: '300'});
+
+            
+                var html_25db021af6b74c7aa90309b5180b12fe = $('         <div id="html_25db021af6b74c7aa90309b5180b12fe"                 style="width: 100.0%; height: 100.0%;">                 Opéra Garnier</div>                 ')[0];
+                popup_8a6405b7bdf947eea98a0e397e9b49b6.setContent(html_25db021af6b74c7aa90309b5180b12fe);
+            
+
+            marker_17d4907b987a46a394084141d1eefb33.bindPopup(popup_8a6405b7bdf947eea98a0e397e9b49b6);
+
+            
+        
+        
+            
+
+            var marker_306a5f2adea3434891827bc3ca558234 = L.marker(
+                [48.87037435,2.3160687345508,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_201189b31e574e81997272f0202043aa = L.popup({maxWidth: '300'});
+
+            
+                var html_765d4541fbdd475090dd2a13ceea659d = $('         <div id="html_765d4541fbdd475090dd2a13ceea659d"                 style="width: 100.0%; height: 100.0%;">                 Palais de l&#39;Élysée</div>                 ')[0];
+                popup_201189b31e574e81997272f0202043aa.setContent(html_765d4541fbdd475090dd2a13ceea659d);
+            
+
+            marker_306a5f2adea3434891827bc3ca558234.bindPopup(popup_201189b31e574e81997272f0202043aa);
+
+            
+        
+        
+            
+
+            var marker_8f8d1a0a4fa6499c917f75c052c13e58 = L.marker(
+                [48.86360075,2.33687186817885,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_1b132bdff2724b02917e597c4e37868c = L.popup({maxWidth: '300'});
+
+            
+                var html_8c60e62070d94294bab94373d07c7381 = $('         <div id="html_8c60e62070d94294bab94373d07c7381"                 style="width: 100.0%; height: 100.0%;">                 Palais Royal</div>                 ')[0];
+                popup_1b132bdff2724b02917e597c4e37868c.setContent(html_8c60e62070d94294bab94373d07c7381);
+            
+
+            marker_8f8d1a0a4fa6499c917f75c052c13e58.bindPopup(popup_1b132bdff2724b02917e597c4e37868c);
+
+            
+        
+        
+            
+
+            var marker_d93f43ec7da846b19867ab4dce8e9c8e = L.marker(
+                [48.84619085,2.34607852190515,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_95991e15c741479ca33691c62d14b56d = L.popup({maxWidth: '300'});
+
+            
+                var html_069b9f85955b45739c2837aa67d9bab8 = $('         <div id="html_069b9f85955b45739c2837aa67d9bab8"                 style="width: 100.0%; height: 100.0%;">                 Panthéon</div>                 ')[0];
+                popup_95991e15c741479ca33691c62d14b56d.setContent(html_069b9f85955b45739c2837aa67d9bab8);
+            
+
+            marker_d93f43ec7da846b19867ab4dce8e9c8e.bindPopup(popup_95991e15c741479ca33691c62d14b56d);
+
+            
+        
+        
+            
+
+            var marker_f40ff0518bda4af3a54f780f2d7513a9 = L.marker(
+                [48.8531848,2.3696769,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_7787ced865874f4baf4bbc8ba8eaab3b = L.popup({maxWidth: '300'});
+
+            
+                var html_1df5601c9f144b0d95f9e2c2a2f14ad9 = $('         <div id="html_1df5601c9f144b0d95f9e2c2a2f14ad9"                 style="width: 100.0%; height: 100.0%;">                 Place de la Bastille</div>                 ')[0];
+                popup_7787ced865874f4baf4bbc8ba8eaab3b.setContent(html_1df5601c9f144b0d95f9e2c2a2f14ad9);
+            
+
+            marker_f40ff0518bda4af3a54f780f2d7513a9.bindPopup(popup_7787ced865874f4baf4bbc8ba8eaab3b);
+
+            
+        
+        
+            
+
+            var marker_f315ad81e6a44912b862877f55accd4c = L.marker(
+                [29.9002052,-90.0095145,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_ae42b512dcc445aa9ca3e4dcaea1fd2a = L.popup({maxWidth: '300'});
+
+            
+                var html_97ff98e7fed74ac7a57e17aabe55b6dc = $('         <div id="html_97ff98e7fed74ac7a57e17aabe55b6dc"                 style="width: 100.0%; height: 100.0%;">                 Place de la Concorde</div>                 ')[0];
+                popup_ae42b512dcc445aa9ca3e4dcaea1fd2a.setContent(html_97ff98e7fed74ac7a57e17aabe55b6dc);
+            
+
+            marker_f315ad81e6a44912b862877f55accd4c.bindPopup(popup_ae42b512dcc445aa9ca3e4dcaea1fd2a);
+
+            
+        
+        
+            
+
+            var marker_e50fc03ac76a48318cd837058c630fff = L.marker(
+                [48.8550492,2.3653782,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_24dc5aaacf37473b8c86831748e9ed27 = L.popup({maxWidth: '300'});
+
+            
+                var html_944dda7611634f48b806ac2ad37c56a2 = $('         <div id="html_944dda7611634f48b806ac2ad37c56a2"                 style="width: 100.0%; height: 100.0%;">                 Place des Vosges</div>                 ')[0];
+                popup_24dc5aaacf37473b8c86831748e9ed27.setContent(html_944dda7611634f48b806ac2ad37c56a2);
+            
+
+            marker_e50fc03ac76a48318cd837058c630fff.bindPopup(popup_24dc5aaacf37473b8c86831748e9ed27);
+
+            
+        
+        
+            
+
+            var marker_b07bec29b3b4425a81863d8ff94e98f2 = L.marker(
+                [48.8674634,2.32942811682519,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_f1a32945b1a84d90b6823b7b0f3fb93c = L.popup({maxWidth: '300'});
+
+            
+                var html_35766d57a23d40599d0bb3f87c446de6 = $('         <div id="html_35766d57a23d40599d0bb3f87c446de6"                 style="width: 100.0%; height: 100.0%;">                 Place Vendôme</div>                 ')[0];
+                popup_f1a32945b1a84d90b6823b7b0f3fb93c.setContent(html_35766d57a23d40599d0bb3f87c446de6);
+            
+
+            marker_b07bec29b3b4425a81863d8ff94e98f2.bindPopup(popup_f1a32945b1a84d90b6823b7b0f3fb93c);
+
+            
+        
+        
+            
+
+            var marker_27676de5ed0a45eea03dfd313b44d2ce = L.marker(
+                [48.8578114,2.3372459,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_6eaba919653342e78c4e5f5c56411ff7 = L.popup({maxWidth: '300'});
+
+            
+                var html_5398e1814469489686d40209d98d5fc8 = $('         <div id="html_5398e1814469489686d40209d98d5fc8"                 style="width: 100.0%; height: 100.0%;">                 Pont des Arts</div>                 ')[0];
+                popup_6eaba919653342e78c4e5f5c56411ff7.setContent(html_5398e1814469489686d40209d98d5fc8);
+            
+
+            marker_27676de5ed0a45eea03dfd313b44d2ce.bindPopup(popup_6eaba919653342e78c4e5f5c56411ff7);
+
+            
+        
+        
+            
+
+            var marker_7567da36c6eb450e8a8bdefc7ead87a3 = L.marker(
+                [43.262991,2.9039699,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_1302529954b6429795fe580fc5b4569a = L.popup({maxWidth: '300'});
+
+            
+                var html_1aca61bac48f47079a8a21b71a112c24 = $('         <div id="html_1aca61bac48f47079a8a21b71a112c24"                 style="width: 100.0%; height: 100.0%;">                 Pont Neuf</div>                 ')[0];
+                popup_1302529954b6429795fe580fc5b4569a.setContent(html_1aca61bac48f47079a8a21b71a112c24);
+            
+
+            marker_7567da36c6eb450e8a8bdefc7ead87a3.bindPopup(popup_1302529954b6429795fe580fc5b4569a);
+
+            
+        
+        
+            
+
+            var marker_091ba828755a439cbce32fc084b7d8ad = L.marker(
+                [48.88680575,2.34301534488351,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_9910d4f06fdf4627ade899487a3fdaa3 = L.popup({maxWidth: '300'});
+
+            
+                var html_616dc526e13a40cea0788900c29ca81c = $('         <div id="html_616dc526e13a40cea0788900c29ca81c"                 style="width: 100.0%; height: 100.0%;">                 Sacré-Coeur</div>                 ')[0];
+                popup_9910d4f06fdf4627ade899487a3fdaa3.setContent(html_616dc526e13a40cea0788900c29ca81c);
+            
+
+            marker_091ba828755a439cbce32fc084b7d8ad.bindPopup(popup_9910d4f06fdf4627ade899487a3fdaa3);
+
+            
+        
+        
+            
+
+            var marker_499613eed93c4b3f9fa8450e7831e367 = L.marker(
+                [48.8582602,2.29449905431968,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_692989f6b5824f2eaf846e54214bace0 = L.popup({maxWidth: '300'});
+
+            
+                var html_5e51d9eb002042a7b4ab18c5704b53d4 = $('         <div id="html_5e51d9eb002042a7b4ab18c5704b53d4"                 style="width: 100.0%; height: 100.0%;">                 Tour Eiffel</div>                 ')[0];
+                popup_692989f6b5824f2eaf846e54214bace0.setContent(html_5e51d9eb002042a7b4ab18c5704b53d4);
+            
+
+            marker_499613eed93c4b3f9fa8450e7831e367.bindPopup(popup_692989f6b5824f2eaf846e54214bace0);
+
+            
+        
+        
+            
+
+            var marker_4269e11b829e40eab2fd2089c6b75ab4 = L.marker(
+                [48.8421139,2.32197778713455,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_613cce30bd954fb19cee774816d76aa8 = L.popup({maxWidth: '300'});
+
+            
+                var html_06ad116819e84a6abbaff6da5e47c786 = $('         <div id="html_06ad116819e84a6abbaff6da5e47c786"                 style="width: 100.0%; height: 100.0%;">                 Tour Montparnasse</div>                 ')[0];
+                popup_613cce30bd954fb19cee774816d76aa8.setContent(html_06ad116819e84a6abbaff6da5e47c786);
+            
+
+            marker_4269e11b829e40eab2fd2089c6b75ab4.bindPopup(popup_613cce30bd954fb19cee774816d76aa8);
+
+            
+        
+        
+            
+
+            var marker_05275642ab114330821d5964265e2699 = L.marker(
+                [48.8580032,2.34892171290132,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_ace785979b2c4fd085704a329b565536 = L.popup({maxWidth: '300'});
+
+            
+                var html_027fdbc4580c4664b51ae9e9f17c1955 = $('         <div id="html_027fdbc4580c4664b51ae9e9f17c1955"                 style="width: 100.0%; height: 100.0%;">                 Tour Saint Jacques</div>                 ')[0];
+                popup_ace785979b2c4fd085704a329b565536.setContent(html_027fdbc4580c4664b51ae9e9f17c1955);
+            
+
+            marker_05275642ab114330821d5964265e2699.bindPopup(popup_ace785979b2c4fd085704a329b565536);
+
+            
+        
+        
+            
+
+            var marker_2ea70b55dbed4e5ab604d04958887c06 = L.marker(
+                [48.8469773,2.34435773332524,],
+                {
+                    icon: new L.Icon.Default()
+                    }
+                )
+                .addTo(map_377ec2aa442340f2aa071602a8ea46f5);
+            
+        
+            
+            var popup_357c5ac350b945c0a6912b7d58d00a00 = L.popup({maxWidth: '300'});
+
+            
+                var html_fa7d2b42f3834cc8a5941d3b348e5c54 = $('         <div id="html_fa7d2b42f3834cc8a5941d3b348e5c54"                 style="width: 100.0%; height: 100.0%;">                 Université la Sorbonne Paris</div>                 ')[0];
+                popup_357c5ac350b945c0a6912b7d58d00a00.setContent(html_fa7d2b42f3834cc8a5941d3b348e5c54);
+            
+
+            marker_2ea70b55dbed4e5ab604d04958887c06.bindPopup(popup_357c5ac350b945c0a6912b7d58d00a00);
+
+            
+        
+        
+        
+        </script>
+        

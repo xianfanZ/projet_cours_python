@@ -1,0 +1,133 @@
+<monuments>	<monument>
+		<name>Arc de Triomphe</name>
+		<coordinates>48.8737791,2.29503722603767</coordinates>
+	</monument>
+	<monument>
+		<name>Bibliothèque François Mitterrand</name>
+		<coordinates>48.8297207,2.3770491</coordinates>
+	</monument>
+	<monument>
+		<name>Café de Flore</name>
+		<coordinates>48.8541444,2.3326307</coordinates>
+	</monument>
+	<monument>
+		<name>Canal Saint Martin</name>
+		<coordinates>48.8730184,2.3639951</coordinates>
+	</monument>
+	<monument>
+		<name>Centre Pompidou</name>
+		<coordinates>48.8605918,2.35247431766534</coordinates>
+	</monument>
+	<monument>
+		<name>Champs Elysées</name>
+		<coordinates>48.8707573,2.3053312</coordinates>
+	</monument>
+	<monument>
+		<name>Cimetière du Père Lachaise</name>
+		<coordinates>48.8612168,2.39391214989343</coordinates>
+	</monument>
+	<monument>
+		<name>Gare de Lyon de Paris</name>
+		<coordinates>48.8448057,2.3734794</coordinates>
+	</monument>
+	<monument>
+		<name>Grand Palais</name>
+		<coordinates>48.86616135,2.31222295966943</coordinates>
+	</monument>
+	<monument>
+		<name>Hôtel de Ville</name>
+		<coordinates>43.9493077,4.80540100174125</coordinates>
+	</monument>
+	<monument>
+		<name>Invalides</name>
+		<coordinates>48.8608923,2.3144984</coordinates>
+	</monument>
+	<monument>
+		<name>Jardin des Plantes</name>
+		<coordinates>48.8432224,2.35950895709484</coordinates>
+	</monument>
+	<monument>
+		<name>Jardin du Luxembourg</name>
+		<coordinates>48.84672285,2.33641303020225</coordinates>
+	</monument>
+	<monument>
+		<name>La Statue de la Liberté</name>
+		<coordinates>46.5856963,0.3428935</coordinates>
+	</monument>
+	<monument>
+		<name>Moulin Rouge</name>
+		<coordinates>48.8840787,2.3324082</coordinates>
+	</monument>
+	<monument>
+		<name>Musée d'Orsay</name>
+		<coordinates>48.85991785,2.32658283469656</coordinates>
+	</monument>
+	<monument>
+		<name>Musée du Louvre</name>
+		<coordinates>48.8608465,2.3335749</coordinates>
+	</monument>
+	<monument>
+		<name>Notre-Dame de Paris</name>
+		<coordinates>48.85293695,2.35005149954546</coordinates>
+	</monument>
+	<monument>
+		<name>Opéra Garnier</name>
+		<coordinates>48.87203085,2.3317901855896</coordinates>
+	</monument>
+	<monument>
+		<name>Palais de l'Élysée</name>
+		<coordinates>48.87037435,2.3160687345508</coordinates>
+	</monument>
+	<monument>
+		<name>Palais Royal</name>
+		<coordinates>48.86360075,2.33687186817885</coordinates>
+	</monument>
+	<monument>
+		<name>Panthéon</name>
+		<coordinates>48.84619085,2.34607852190515</coordinates>
+	</monument>
+	<monument>
+		<name>Place de la Bastille</name>
+		<coordinates>48.8531848,2.3696769</coordinates>
+	</monument>
+	<monument>
+		<name>Place de la Concorde</name>
+		<coordinates>29.9002052,-90.0095145</coordinates>
+	</monument>
+	<monument>
+		<name>Place des Vosges</name>
+		<coordinates>48.8550492,2.3653782</coordinates>
+	</monument>
+	<monument>
+		<name>Place Vendôme</name>
+		<coordinates>48.8674634,2.32942811682519</coordinates>
+	</monument>
+	<monument>
+		<name>Pont des Arts</name>
+		<coordinates>48.8578114,2.3372459</coordinates>
+	</monument>
+	<monument>
+		<name>Pont Neuf</name>
+		<coordinates>43.262991,2.9039699</coordinates>
+	</monument>
+	<monument>
+		<name>Sacré-Coeur</name>
+		<coordinates>48.88680575,2.34301534488351</coordinates>
+	</monument>
+	<monument>
+		<name>Tour Eiffel</name>
+		<coordinates>48.8582602,2.29449905431968</coordinates>
+	</monument>
+	<monument>
+		<name>Tour Montparnasse</name>
+		<coordinates>48.8421139,2.32197778713455</coordinates>
+	</monument>
+	<monument>
+		<name>Tour Saint Jacques</name>
+		<coordinates>48.8580032,2.34892171290132</coordinates>
+	</monument>
+	<monument>
+		<name>Université la Sorbonne Paris</name>
+		<coordinates>48.8469773,2.34435773332524</coordinates>
+	</monument>
+</monuments>
