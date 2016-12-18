@@ -25,18 +25,18 @@ def extract_coord(listemon):
 	Retourne fichier geojson de monuments choisis et geocoordonnées 
 	"""
 	with open("../json/monuments_coord.geojson", "w") as sortie:
-		sortie.write( "{\"type\":\"FeatureCollection\",\"features:\"\n\n[\n\n")
+		sortie.write( "{\"type\":\"FeatureCollection\",\"features\":[")
 		geolocator = Nominatim()
 		for monument in listemon:
 			#location = geolocator.geocode(monument, geometry="geojson") La sortie geojson de geopy est trop verbeuse et rend des coordonnées de polygones
 			#print(location.raw)
 			location = geolocator.geocode(monument)
-			sortie.write( "{\"type\": \"Feature\",\n" )
-			sortie.write( " \"geometry\": {\n" )
-			sortie.write( "   \"type\": \"Point\",\n" )
-			sortie.write( "   \"coordinates\": "+ str([location.latitude, location.longitude] )+"\n },\n" )
-			sortie.write( " \"properties: {\n" )
-			sortie.write( "   \"name\": \""+monument+"\"\n }\n},\n\n" )
+			sortie.write( "{\"type\": \"Feature\"," )
+			sortie.write( "\"geometry\": { " )
+			sortie.write( "\"type\": \"Point\"," )
+			sortie.write( "\"coordinates\": "+ str([location.latitude, location.longitude] )+"}," )
+			sortie.write( "\"properties: {" )
+			sortie.write( "\"name\": \""+monument+"\"} }," )
 		sortie.write("]")
 
 
