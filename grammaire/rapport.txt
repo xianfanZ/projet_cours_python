@@ -1,1 +1,5 @@
 Résultat de la validation du document xml 
+
+xmllint xml/film_final.xml --relaxng grammaire/films_final.rng
+
+xml/film_final.xml validates
