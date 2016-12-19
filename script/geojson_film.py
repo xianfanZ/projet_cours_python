@@ -1,3 +1,9 @@
+# -*- coding: utf-8 -*-
+#python3
+
+# Synopsis :
+# Usage :
+
 import json
 from lxml import etree
 

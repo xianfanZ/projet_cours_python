@@ -1,0 +1,17 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT monuments (monument)+>
+<!ATTLIST monuments
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT monument (name,coordinates)>
+<!ATTLIST monument
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT name (#PCDATA)>
+<!ATTLIST name
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT coordinates (#PCDATA)>
+<!ATTLIST coordinates
+  xmlns CDATA #FIXED ''>

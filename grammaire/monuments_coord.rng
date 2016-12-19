@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar 
+    xmlns="http://relaxng.org/ns/structure/1.0"
+    xmlns:a="http://relaxng.org/ns/compatibility/annotations/1.0"
+    datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+    
+    <define name="monuments">
+        <element name="monuments">
+            <oneOrMore>
+                <ref name="monument"/>
+            </oneOrMore>
+        </element>
+    </define>
+    
+    <define name="monument">
+        <element name="monument">
+            <group>
+                <ref name="name"/>
+                <ref name="coordinates"/>
+            </group>
+        </element>
+    </define>
+    
+    <define name="name">
+        <element name="name">
+            <text/>
+        </element>
+    </define>
+    
+    <define name="coordinates">
+        <element name="coordinates">
+            <text/>
+        </element>
+    </define>
+    
+    <start>
+        <ref name="monuments"></ref>
+    </start>
+</grammar>

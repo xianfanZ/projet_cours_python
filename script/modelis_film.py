@@ -1,4 +1,8 @@
 # -*- coding: utf-8 -*-
+#python3
+
+# Synopsis :
+# Usage :
 
 from lxml import etree
 
