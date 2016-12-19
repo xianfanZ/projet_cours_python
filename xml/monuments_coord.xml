@@ -1,4 +1,7 @@
-<monuments>	<monument>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE monuments SYSTEM "monuments_coord.dtd">
+<monuments>
+	<monument>
 		<name>Arc de Triomphe</name>
 		<coordinates>48.8737791,2.29503722603767</coordinates>
 	</monument>
@@ -36,7 +39,7 @@
 	</monument>
 	<monument>
 		<name>Hôtel de Ville</name>
-		<coordinates>43.9493077,4.80540100174125</coordinates>
+		<coordinates>48.8601,2.3507</coordinates>
 	</monument>
 	<monument>
 		<name>Invalides</name>
@@ -49,10 +52,6 @@
 	<monument>
 		<name>Jardin du Luxembourg</name>
 		<coordinates>48.84672285,2.33641303020225</coordinates>
-	</monument>
-	<monument>
-		<name>La Statue de la Liberté</name>
-		<coordinates>46.5856963,0.3428935</coordinates>
 	</monument>
 	<monument>
 		<name>Moulin Rouge</name>
@@ -92,7 +91,7 @@
 	</monument>
 	<monument>
 		<name>Place de la Concorde</name>
-		<coordinates>29.9002052,-90.0095145</coordinates>
+		<coordinates>48.86543,2.32114</coordinates>
 	</monument>
 	<monument>
 		<name>Place des Vosges</name>
@@ -108,7 +107,7 @@
 	</monument>
 	<monument>
 		<name>Pont Neuf</name>
-		<coordinates>43.262991,2.9039699</coordinates>
+		<coordinates>48.85725,2.34148</coordinates>
 	</monument>
 	<monument>
 		<name>Sacré-Coeur</name>
