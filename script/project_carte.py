@@ -1,15 +1,15 @@
 import xml.etree.ElementTree as ET
 import folium
-#import Basemap
 
-carte_monuments = folium.Map(location=[48.87, 2.33],zoom_start=13)
+
+#carte_monuments = folium.Map(location=[48.87, 2.33],zoom_start=13)
 #carte_monuments_tournages = folium.Map(location=[48.87, 2.33],zoom_start=13)
 def mark_monuments(map_osm):
     tree = ET.parse('../xml/monuments_coord.xml')
     for elem in tree.iter(tag='monument'):
         name = elem.find('name').text
         coor = elem.find('coordinates').text
-        folium.CircleMarker(location=[coor],radius=70,fill_color='#3186cc',popup=name).add_to(map_osm)
+        folium.CircleMarker(location=[coor],radius=100,fill_color='#3186cc',popup=name).add_to(map_osm)
     return
     
 
@@ -20,10 +20,12 @@ def mark_tournage(map_osm):
         lattitude = elem.find('geo1').text
         longtitude = elem.find('geo2').text
         coor = lattitude + ',' + longtitude
-        folium.Marker(location=[coor]).add_to(map_osm)
+        folium.CircleMarker(location=[coor],radius=1).add_to(map_osm)
     return
 
-#m = Basemap(projection='merc')
+carte_tournages = folium.Map(location=[48.87, 2.33],zoom_start=13)
+
+
 
 #with open('../json/monuments_coord.geojson','r') as file:
     #monuments = json.dumps(file)
@@ -37,8 +39,10 @@ def mark_tournage(map_osm):
 
 
 #folium.GeoJson('../json/monuments_coord.geojson').add_to(map_osm)
-mark_monuments(carte_monuments)
+#mark_monuments(carte_monuments)
 #mark_monuments(carte_monuments_tournages)
-#mark_tournage(carte_monuments_tournages)
-carte_monuments.save('../cartes/carte_monuments.html')
+mark_tournage(carte_tournages)
+mark_monuments(carte_tournages)
+#carte_monuments.save('../cartes/carte_monuments.html')
 #carte_monuments_tournages.save('../cartes/carte_monuments_tournages.html')
+carte_tournages.save('../cartes/carte_monuments_tournages.html')
