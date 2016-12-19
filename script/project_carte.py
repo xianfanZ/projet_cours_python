@@ -1,13 +1,27 @@
 import xml.etree.ElementTree as ET
 import folium
 import json
-map_osm = folium.Map(location=[48.8737791, 2.29503722603767]) 
-geo_path = r'../json/monuments_coord.geojson'
-tree = ET.parse('../xml/monuments_coord.xml')
-for elem in tree.iter(tag='monument'):
-    name = elem.find('name').text
-    coor = elem.find('coordinates').text
-    folium.Marker(location=[coor],popup=name).add_to(map_osm)
+
+carte = folium.Map(location=[48.87, 2.33],zoom_start=13)
+def mark_monuments(map_osm):
+    geo_path = r'../json/monuments_coord.geojson'
+    tree = ET.parse('../xml/monuments_coord.xml')
+    for elem in tree.iter(tag='monument'):
+        name = elem.find('name').text
+        coor = elem.find('coordinates').text
+        folium.CircleMarker(location=[coor],radius=70,fill_color='#3186cc',popup=name).add_to(map_osm)
+    return
+    
+
+
+def mark_tournage(map_osm):
+    tree = ET.parse('../xml/film_final.xml')
+    for elem in tree.iter(tag = 'film'):
+        lattitude = elem.find('geo1').text
+        longtitude = elem.find('geo2').text
+        coor = lattitude + ',' + longtitude
+        folium.Marker(location=[coor]).add_to(map_osm)
+    return
     
 #with open('../json/monuments_coord.geojson','r') as file:
     #monuments = json.dumps(file)
@@ -21,4 +35,6 @@ for elem in tree.iter(tag='monument'):
 
 
 #folium.GeoJson('../json/monuments_coord.geojson').add_to(map_osm)
-map_osm.save('../cartes/carte_monuments.html')
+mark_monuments(carte)
+mark_tournage(carte)
+carte.save('../cartes/carte_monuments.html')
