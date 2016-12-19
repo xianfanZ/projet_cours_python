@@ -38,6 +38,19 @@ Nettoyage fichiers géolocalisation des monuments (problèmes encodage fichier m
 Abandon de l'obtention des géocoordonnées des monuments à partir de monuments.json et monuments.odt 
 (plus de la moitié des monuments ne sont pas présents!). Obtention des coordonnées de tous les monuments avec geopy (script 'traite_monuments.py', résultat 'monuments_coord.geojson').
 
+18/12
+Élaboration des cartes. Abandon du fichier 'monuments_coord.geojson' pour une version en xml ('monuments_coord.geojson').
+Grammaires pour films_final.xml
+
+19/12
+Correction coordonnées Hôtel de Ville, Place de la Concorde, Pont Neuf. Élimination monument ambigu (Statue de la Liberté).
+Élaboration carte des monuments et carte des films et des monuments ('project_carte.py')
+Hypothèse initiale non confirmée? 
+Utilisation de vincenty et de great_circle de geopy pour trouver les tournages proches des monuments?
+Grammaires pour monuments_coord.xml
+
+
+
 04/01
 
 
