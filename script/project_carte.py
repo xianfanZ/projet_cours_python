@@ -2,7 +2,8 @@ import xml.etree.ElementTree as ET
 import folium
 import json
 
-carte = folium.Map(location=[48.87, 2.33],zoom_start=13)
+carte_monuments = folium.Map(location=[48,87,2.33],zoom_start=13)
+carte_monuments_tournages = folium.Map(location=[48.87, 2.33],zoom_start=13)
 def mark_monuments(map_osm):
     geo_path = r'../json/monuments_coord.geojson'
     tree = ET.parse('../xml/monuments_coord.xml')
@@ -35,6 +36,8 @@ def mark_tournage(map_osm):
 
 
 #folium.GeoJson('../json/monuments_coord.geojson').add_to(map_osm)
-mark_monuments(carte)
-mark_tournage(carte)
-carte.save('../cartes/carte_monuments.html')
+mark_monuments(carte_monuments)
+mark_monuments(carte_monuments_tournages)
+mark_tournage(carte_monuments_tournages)
+carte_monuments.save('../cartes/carte_monuments.html')
+carte_monuments_tournages.save('../cartes/carte_monuments_tournages.html')
