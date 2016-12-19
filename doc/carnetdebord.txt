@@ -46,6 +46,7 @@ Grammaires pour films_final.xml
 Correction coordonnées Hôtel de Ville, Place de la Concorde, Pont Neuf. Élimination monument ambigu (Statue de la Liberté).
 Élaboration carte des monuments et carte des films et des monuments ('project_carte.py')
 Hypothèse initiale non confirmée? 
+Amélioration la carte de tournages et de monuments pour qu’il soit plus lisible. (Les tournages s’affichent en point et les monuments s’affichent en cercle)
 Utilisation de vincenty et de great_circle de geopy pour trouver les tournages proches des monuments?
 Grammaires pour monuments_coord.xml
 
