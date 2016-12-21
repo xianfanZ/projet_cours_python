@@ -1,67 +1,13 @@
 {"type":"FeatureCollection", "features":
 
- [ {"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8737791, 2.29503722603767] }, "properties": { "name": "Arc de Triomphe" } },
+ [ {"type": "Feature", "geometry": { "type": "Point", "coordinates": ['+', '>'] }, "properties": { "name": "<" } },
 
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8297207, 2.3770491] }, "properties": { "name": "Bibliothèque François Mitterrand" } },
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": ['r', 'e'] }, "properties": { "name": "<" } },
 
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8541444, 2.3326307] }, "properties": { "name": "Café de Flore" } },
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": ['+', '+'] }, "properties": { "name": "<" } },
 
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8730184, 2.3639951] }, "properties": { "name": "Canal Saint Martin" } },
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": ['+', '+'] }, "properties": { "name": "<" } },
 
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8605918, 2.35247431766534] }, "properties": { "name": "Centre Pompidou" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8707573, 2.3053312] }, "properties": { "name": "Champs Elysées" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8612168, 2.39391214989343] }, "properties": { "name": "Cimetière du Père Lachaise" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8448057, 2.3734794] }, "properties": { "name": "Gare de Lyon de Paris" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.86616135, 2.31222295966943] }, "properties": { "name": "Grand Palais" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8601, 2.3507] }, "properties": { "name": "Hôtel de Ville" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8608923, 2.3144984] }, "properties": { "name": "Invalides" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8432224, 2.35950895709484] }, "properties": { "name": "Jardin des Plantes" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.84672285, 2.33641303020225] }, "properties": { "name": "Jardin du Luxembourg" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8840787, 2.3324082] }, "properties": { "name": "Moulin Rouge" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.85991785, 2.32658283469656] }, "properties": { "name": "Musée d'Orsay" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8608465, 2.3335749] }, "properties": { "name": "Musée du Louvre" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.85293695, 2.35005149954546] }, "properties": { "name": "Notre-Dame de Paris" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.87203085, 2.3317901855896] }, "properties": { "name": "Opéra Garnier" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.87037435, 2.3160687345508] }, "properties": { "name": "Palais de l'Élysée" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.86360075, 2.33687186817885] }, "properties": { "name": "Palais Royal" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.84619085, 2.34607852190515] }, "properties": { "name": "Panthéon" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8531848, 2.3696769] }, "properties": { "name": "Place de la Bastille" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.86543, 2.32114] }, "properties": { "name": "Place de la Concorde" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8550492, 2.3653782] }, "properties": { "name": "Place des Vosges" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8674634, 2.32942811682519] }, "properties": { "name": "Place Vendôme" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8578114, 2.3372459] }, "properties": { "name": "Pont des Arts" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.85725, 2.34148] }, "properties": { "name": "Pont Neuf" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.88680575, 2.34301534488351] }, "properties": { "name": "Sacré-Coeur" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8582602, 2.29449905431968] }, "properties": { "name": "Tour Eiffel" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8421139, 2.32197778713455] }, "properties": { "name": "Tour Montparnasse" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8580032, 2.34892171290132] }, "properties": { "name": "Tour Saint Jacques" } },
-
-{"type": "Feature", "geometry": { "type": "Point", "coordinates": [48.8469773, 2.34435773332524] }, "properties": { "name": "Université la Sorbonne Paris" } },
+{"type": "Feature", "geometry": { "type": "Point", "coordinates": ['t', 'a'] }, "properties": { "name": "s" } },
 
  ] }

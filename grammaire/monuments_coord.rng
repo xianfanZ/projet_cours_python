@@ -14,11 +14,18 @@
     
     <define name="monument">
         <element name="monument">
+            <ref name="att.monument"/>
             <group>
                 <ref name="name"/>
                 <ref name="coordinates"/>
             </group>
         </element>
+    </define>
+    
+    <define name="att.monument">
+        <attribute name="espace">
+            <text/>
+        </attribute>
     </define>
     
     <define name="name">

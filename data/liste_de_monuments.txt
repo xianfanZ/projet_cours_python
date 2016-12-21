@@ -1,4 +1,4 @@
-++Arc de Triomphe
+<++>Arc de Triomphe
 Bibliothèque François Mitterrand
 Café de Flore
 Canal Saint Martin
@@ -6,17 +6,17 @@ Centre Pompidou
 <rectangle>Champs Elysées
 Cimetière du Père Lachaise
 Gare de Lyon de Paris
-+Grand Palais
+<+>Grand Palais
 Hôtel de Ville
-++Invalides
+<++>Invalides
 Jardin des Plantes
-++Jardin du Luxembourg
+<++>Jardin du Luxembourg
 Moulin Rouge
 Musée d'Orsay
-++Musée du Louvre
-+Notre-Dame de Paris
-+Opéra Garnier
-+Palais de l'Élysée
+<++>Musée du Louvre
+<+>Notre-Dame de Paris
+<+>Opéra Garnier
+<+>Palais de l'Élysée
 Palais Royal
 Panthéon
 Place de la Bastille
@@ -25,8 +25,8 @@ Place des Vosges
 Place Vendôme
 Pont des Arts
 Pont Neuf
-++Sacré-Coeur
-+++Tour Eiffel
-++Tour Montparnasse
+<++>Sacré-Coeur
+<+++>Tour Eiffel
+<++>Tour Montparnasse
 Tour Saint Jacques
 Université la Sorbonne Paris

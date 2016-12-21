@@ -5,8 +5,7 @@
   xmlns CDATA #FIXED ''>
 
 <!ELEMENT monument (name,coordinates)>
-<!ATTLIST monument
-  xmlns CDATA #FIXED ''>
+<!ATTLIST monument espace CDATA #REQUIRED>
 
 <!ELEMENT name (#PCDATA)>
 <!ATTLIST name
