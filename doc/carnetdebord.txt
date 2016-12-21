@@ -50,6 +50,10 @@ Amélioration la carte de tournages et de monuments pour qu’il soit plus lisib
 Utilisation de vincenty et de great_circle de geopy pour trouver les tournages proches des monuments?
 Grammaires pour monuments_coord.xml
 
+21/12
+Modification du script traite_monuments.py pour différencier l’espace des monuments. 
+Mis à jour des grammaires pour le nouveau fichier monuments_coord.xml
+
 
 
 04/01
