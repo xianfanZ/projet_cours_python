@@ -1,53 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE monuments SYSTEM "../grammaire/monuments_coord.dtd">
 <monuments>
-	<monument espace='&lt;+&gt;'>
-		<name>Grand Palais</name>
-		<coordinates>48.86616135,2.31222295966943</coordinates>
+	<monument espace='&lt;+++&gt;'>
+		<name>Cimetière du Père Lachaise</name>
+		<coordinates>48.8612168,2.39391214989343</coordinates>
 	</monument>
-	<monument espace='&lt;+&gt;'>
-		<name>Notre-Dame de Paris</name>
-		<coordinates>48.85293695,2.35005149954546</coordinates>
-	</monument>
-	<monument espace='&lt;+&gt;'>
-		<name>Opéra Garnier</name>
-		<coordinates>48.87203085,2.3317901855896</coordinates>
-	</monument>
-	<monument espace='&lt;+&gt;'>
-		<name>Palais de l'Élysée</name>
-		<coordinates>48.87037435,2.3160687345508</coordinates>
-	</monument>
-	<monument espace='&lt;rectangle&gt;'>
-		<name>Champs Elysées</name>
-		<coordinates>48.8707573,2.3053312</coordinates>
+	<monument espace='&lt;+++&gt;'>
+		<name>Jardin des Plantes</name>
+		<coordinates>48.8432224,2.35950895709484</coordinates>
 	</monument>
 	<monument espace='&lt;+++&gt;'>
 		<name>Tour Eiffel</name>
 		<coordinates>48.8582602,2.29449905431968</coordinates>
-	</monument>
-	<monument espace='&lt;++&gt;'>
-		<name>Arc de Triomphe</name>
-		<coordinates>48.8737791,2.29503722603767</coordinates>
-	</monument>
-	<monument espace='&lt;++&gt;'>
-		<name>Invalides</name>
-		<coordinates>48.8608923,2.3144984</coordinates>
-	</monument>
-	<monument espace='&lt;++&gt;'>
-		<name>Jardin du Luxembourg</name>
-		<coordinates>48.84672285,2.33641303020225</coordinates>
-	</monument>
-	<monument espace='&lt;++&gt;'>
-		<name>Musée du Louvre</name>
-		<coordinates>48.8608465,2.3335749</coordinates>
-	</monument>
-	<monument espace='&lt;++&gt;'>
-		<name>Sacré-Coeur</name>
-		<coordinates>48.88680575,2.34301534488351</coordinates>
-	</monument>
-	<monument espace='&lt;++&gt;'>
-		<name>Tour Montparnasse</name>
-		<coordinates>48.8421139,2.32197778713455</coordinates>
 	</monument>
 	<monument espace='standard'>
 		<name>Bibliothèque François Mitterrand</name>
@@ -58,24 +22,12 @@
 		<coordinates>48.8541444,2.3326307</coordinates>
 	</monument>
 	<monument espace='standard'>
-		<name>Canal Saint Martin</name>
-		<coordinates>48.8730184,2.3639951</coordinates>
-	</monument>
-	<monument espace='standard'>
 		<name>Centre Pompidou</name>
 		<coordinates>48.8605918,2.35247431766534</coordinates>
 	</monument>
 	<monument espace='standard'>
-		<name>Cimetière du Père Lachaise</name>
-		<coordinates>48.8612168,2.39391214989343</coordinates>
-	</monument>
-	<monument espace='standard'>
 		<name>Gare de Lyon de Paris</name>
 		<coordinates>48.8448057,2.3734794</coordinates>
-	</monument>
-	<monument espace='standard'>
-		<name>Jardin des Plantes</name>
-		<coordinates>48.8432224,2.35950895709484</coordinates>
 	</monument>
 	<monument espace='standard'>
 		<name>Moulin Rouge</name>
@@ -110,11 +62,67 @@
 		<coordinates>48.8578114,2.3372459</coordinates>
 	</monument>
 	<monument espace='standard'>
+		<name>Pont Alexandre III</name>
+		<coordinates>48.8629974,2.3134662</coordinates>
+	</monument>
+	<monument espace='standard'>
+		<name>Pont de l’Alma</name>
+		<coordinates>48.8628149,2.3016791</coordinates>
+	</monument>
+	<monument espace='standard'>
 		<name>Tour Saint Jacques</name>
 		<coordinates>48.8580032,2.34892171290132</coordinates>
 	</monument>
 	<monument espace='standard'>
 		<name>Université la Sorbonne Paris</name>
 		<coordinates>48.8469773,2.34435773332524</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Arc de Triomphe</name>
+		<coordinates>48.8737791,2.29503722603767</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Canal Saint Martin</name>
+		<coordinates>48.8730184,2.3639951</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Champs Elysées</name>
+		<coordinates>48.8707573,2.3053312</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Invalides</name>
+		<coordinates>48.8608923,2.3144984</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Jardin du Luxembourg</name>
+		<coordinates>48.84672285,2.33641303020225</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Musée du Louvre</name>
+		<coordinates>48.8608465,2.3335749</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Sacré-Coeur</name>
+		<coordinates>48.88680575,2.34301534488351</coordinates>
+	</monument>
+	<monument espace='&lt;++&gt;'>
+		<name>Tour Montparnasse</name>
+		<coordinates>48.8421139,2.32197778713455</coordinates>
+	</monument>
+	<monument espace='&lt;+&gt;'>
+		<name>Grand Palais</name>
+		<coordinates>48.86616135,2.31222295966943</coordinates>
+	</monument>
+	<monument espace='&lt;+&gt;'>
+		<name>Notre-Dame de Paris</name>
+		<coordinates>48.85293695,2.35005149954546</coordinates>
+	</monument>
+	<monument espace='&lt;+&gt;'>
+		<name>Opéra Garnier</name>
+		<coordinates>48.87203085,2.3317901855896</coordinates>
+	</monument>
+	<monument espace='&lt;+&gt;'>
+		<name>Palais de l'Élysée</name>
+		<coordinates>48.87037435,2.3160687345508</coordinates>
 	</monument>
 </monuments>

@@ -1,20 +1,19 @@
 <++>Arc de Triomphe
 Bibliothèque François Mitterrand
 Café de Flore
-Canal Saint Martin
+<++>Canal Saint Martin
 Centre Pompidou
-<rectangle>Champs Elysées
-Cimetière du Père Lachaise
+<+++>Cimetière du Père Lachaise
 Gare de Lyon de Paris
 <+>Grand Palais
 Hôtel de Ville
 <++>Invalides
-Jardin des Plantes
+<+++>Jardin des Plantes
 <++>Jardin du Luxembourg
 Moulin Rouge
 Musée d'Orsay
 <++>Musée du Louvre
-<+>Notre-Dame de Paris
+<+＋>Notre-Dame de Paris
 <+>Opéra Garnier
 <+>Palais de l'Élysée
 Palais Royal
@@ -25,6 +24,8 @@ Place des Vosges
 Place Vendôme
 Pont des Arts
 Pont Neuf
+Pont Alexandre III
+Pont de l’Alma
 <++>Sacré-Coeur
 <+++>Tour Eiffel
 <++>Tour Montparnasse

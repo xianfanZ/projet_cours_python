@@ -2,47 +2,49 @@ import xml.etree.ElementTree as ET
 import folium
 
 
-#carte_monuments = folium.Map(location=[48.87, 2.33],zoom_start=13)
-#carte_monuments_tournages = folium.Map(location=[48.87, 2.33],zoom_start=13)
-def mark_monuments(map_osm):
-    tree = ET.parse('../xml/monuments_coord.xml')
+def mark_monuments(nomfichier):
+    """
+    Projection des monuments dans la carte
+    Arg: fichier XML de coordonnés des monuments
+    Retourne: une carte OpenStreetMap
+    """
+    carte_monuments = folium.Map(location=[48.87, 2.33],zoom_start=13)
+    tree = ET.parse(nomfichier)
     for elem in tree.iter(tag='monument'):
         name = elem.find('name').text
         coor = elem.find('coordinates').text
-        folium.CircleMarker(location=[coor],radius=100,fill_color='#3186cc',popup=name).add_to(map_osm)
-    return
+        if elem.attrib == {'espace': 'standard'}:
+            folium.CircleMarker(location=[coor],radius=100,fill_color='#3186cc',popup=name).add_to(carte_monuments)
+        elif elem.attrib == {'espace': '<+>'}:
+            folium.CircleMarker(location=[coor],radius=150,fill_color='#3186cc',popup=name).add_to(carte_monuments)
+        elif elem.attrib == {'espace': '<++>'}:
+            folium.CircleMarker(location=[coor],radius=200,fill_color='#3186cc',popup=name).add_to(carte_monuments)
+        else:
+            folium.CircleMarker(location=[coor],radius=250,fill_color='#3186cc',popup=name).add_to(carte_monuments)
+    return carte_monuments
     
 
 
-def mark_tournage(map_osm):
-    tree = ET.parse('../xml/film_final.xml')
+def mark_tournage(carte,nomfichier):
+    """
+    Projection de tournages dans une carte OpenStreetMap
+    Arg: la carte OpenStreetMap qui a déjà marqué les monuments, et le fichier XML des films
+    """
+    tree = ET.parse(nomfichier)
     for elem in tree.iter(tag = 'film'):
         lattitude = elem.find('geo1').text
         longtitude = elem.find('geo2').text
         coor = lattitude + ',' + longtitude
-        folium.CircleMarker(location=[coor],radius=1).add_to(map_osm)
-    return
-
-carte_tournages = folium.Map(location=[48.87, 2.33],zoom_start=13)
+        folium.CircleMarker(location=[coor],radius=1).add_to(carte)
+    return carte
 
 
 
-#with open('../json/monuments_coord.geojson','r') as file:
-    #monuments = json.dumps(file)
-    #print(monuments)
-    
-#for monument in monuments:
-#    print(monument)
-#    folium.Marker(location = [monument["geometry"]["coordinates"][1],monument["geometry"]["coordinates"][0]])
-    
-#data2 = pd.read_json(json.dumps(data["features"]), typ='frame')
-
-
-#folium.GeoJson('../json/monuments_coord.geojson').add_to(map_osm)
-#mark_monuments(carte_monuments)
-#mark_monuments(carte_monuments_tournages)
-mark_tournage(carte_tournages)
-mark_monuments(carte_tournages)
-#carte_monuments.save('../cartes/carte_monuments.html')
-#carte_monuments_tournages.save('../cartes/carte_monuments_tournages.html')
-carte_tournages.save('../cartes/carte_monuments_tournages.html')
+def main():
+    print("Projection des monuments et tous les tournages dans une carte...")
+    carte_monuments = mark_tournage(mark_monuments("../xml/monuments_coord.xml"),"../xml/film_final.xml")
+    print("Réussir à créer la carte!")
+    carte_monuments.save('../cartes/carte_monuments.html')
+    print("Fin")
+if __name__ == '__main__':
+    main()
