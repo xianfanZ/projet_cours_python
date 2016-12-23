@@ -44,7 +44,7 @@ def main():
     print("Projection des monuments et tous les tournages dans une carte...")
     carte_monuments = mark_tournage(mark_monuments("../xml/monuments_coord.xml"),"../xml/film_final.xml")
     print("Réussir à créer la carte!")
-    carte_monuments.save('../cartes/carte_monuments.html')
+    carte_monuments.save('../cartes/carte_monuments_tournages.html')
     print("Fin")
 if __name__ == '__main__':
     main()
