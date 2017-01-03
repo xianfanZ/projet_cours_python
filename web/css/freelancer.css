@@ -82,36 +82,42 @@ hr.star-primary:after {
 header {
     text-align: center;
     color: #fff;
-    background: #18bc9c;
+    background: #fff;
 }
 
 header .container {
     padding-top: 100px;
     padding-bottom: 50px;
+    
 }
 
 header img {
     display: block;
     margin: 0 auto 20px;
+    
 }
 
 header .intro-text .name {
     display: block;
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
-    font-size: 2em;
+    font-size: 4em;
     font-weight: 700;
+    color: #2C3E50;
+    text-shadow: 8px 8px 18px #FFFFCC;
 }
 
 header .intro-text .skills {
-    font-size: 1.25em;
+    font-size: 2em;
     font-weight: 300;
+    color: #2C3E50;
 }
 
-@media(min-width:768px) {
+@media(min-width:1170px) {
     header .container {
-        padding-top: 200px;
-        padding-bottom: 100px;
+        padding-top: 300px;
+        padding-bottom: 300px;
+
     }
 
     header .intro-text .name {
@@ -358,8 +364,8 @@ footer .footer-below {
 
 .btn-social {
     display: inline-block;
-    width: 50px;
-    height: 50px;
+    width: 150px;
+    height: 150px;
     border: 2px solid #fff;
     border-radius: 100%;
     text-align: center;
