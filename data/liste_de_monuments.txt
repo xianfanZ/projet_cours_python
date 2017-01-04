@@ -13,7 +13,7 @@ Hôtel de Ville
 Moulin Rouge
 Musée d'Orsay
 <++>Musée du Louvre
-<+＋>Notre-Dame de Paris
+<++>Notre-Dame de Paris
 <+>Opéra Garnier
 <+>Palais de l'Élysée
 Palais Royal
