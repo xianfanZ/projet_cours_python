@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<grammar ns="" xmlns="http://relaxng.org/ns/structure/1.0" datatypeLibrary="http://www.w3.org/2001/XMLSchema-datatypes">
+  <start>
+    <element name="tournagesdefilmsparis2011">
+      <oneOrMore>
+        <element name="film">
+          <attribute name="id">
+            <data type="integer"/>
+          </attribute>
+          <element name="Titre">
+            <text/>
+          </element>
+          <element name="Realisateur">
+            <text/>
+          </element>
+          <element name="Date_Debut_Evenement">
+            <data type="date"/>
+          </element>
+          <element name="Date_Fin_Evenement">
+            <data type="date"/>
+          </element>
+          <element name="Cadre">
+            <text/>
+          </element>
+          <element name="Lieu">
+            <text/>
+          </element>
+          <element name="Adresse">
+            <text/>
+          </element>
+          <element name="Arrondissement">
+            <data type="integer"/>
+          </element>
+          <element name="Adresse_complete">
+            <text/>
+          </element>
+          <element name="geo1">
+            <data type="decimal"/>
+          </element>
+          <element name="geo2">
+            <data type="decimal"/>
+          </element>
+          <element name="Momument_proche">
+            <attribute name="type_radius"/>
+            <text/>
+          </element>
+        </element>
+      </oneOrMore>
+    </element>
+  </start>
+</grammar>
