@@ -1,18 +1,19 @@
-.h2 {
+div {
+    float:center;
     font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
+    font-color: #2c3e50;
 }
 .table_result table {
-	width:100%;
-	margin:15px 0;
+	width:200%;
 	border:0;
 	float:center;
 	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
 }
 .table_result th {
-	background-color:#87CEFA;
-	color:#000000
+	background-color:#18bc9c;
+	color:#FFFFFF
 }
 .table_result,.table_result th,.table_result td {
 	font-size:0.95em;
@@ -21,17 +22,10 @@
 	border-collapse:collapse;
 	font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-style: normal;
+    font-color: #2c3e50;
 }
 .table_result th,.table_result td {
-	border: 1px solid #bae3fc;
-	border-width:1px 0 1px 0
+	border: 1px solid #2c3e50;
+	border-collapse:collapse
 }
-.table_result tr {
-	border: 1px solid #bae3fc;
-}
-.table_result tr:nth-child(odd){
-	background-color:#d7eefd;
-}
-.table_result tr:nth-child(even){
-	background-color:#fdfdfd;
-}
+
