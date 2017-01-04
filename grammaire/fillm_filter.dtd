@@ -1,0 +1,61 @@
+<?xml encoding="UTF-8"?>
+
+<!ELEMENT tournagesdefilmsparis2011 (film)+>
+<!ATTLIST tournagesdefilmsparis2011
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT film (Titre,Realisateur,Date_Debut_Evenement,
+                Date_Fin_Evenement,Cadre,Lieu,Adresse,Arrondissement,
+                Adresse_complete,geo1,geo2,Momument_proche)>
+<!ATTLIST film
+  xmlns CDATA #FIXED ''
+  id CDATA #REQUIRED>
+
+<!ELEMENT Titre (#PCDATA)>
+<!ATTLIST Titre
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Realisateur (#PCDATA)>
+<!ATTLIST Realisateur
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Date_Debut_Evenement (#PCDATA)>
+<!ATTLIST Date_Debut_Evenement
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Date_Fin_Evenement (#PCDATA)>
+<!ATTLIST Date_Fin_Evenement
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Cadre (#PCDATA)>
+<!ATTLIST Cadre
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Lieu (#PCDATA)>
+<!ATTLIST Lieu
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Adresse (#PCDATA)>
+<!ATTLIST Adresse
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Arrondissement (#PCDATA)>
+<!ATTLIST Arrondissement
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Adresse_complete (#PCDATA)>
+<!ATTLIST Adresse_complete
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT geo1 (#PCDATA)>
+<!ATTLIST geo1
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT geo2 (#PCDATA)>
+<!ATTLIST geo2
+  xmlns CDATA #FIXED ''>
+
+<!ELEMENT Momument_proche (#PCDATA)>
+<!ATTLIST Momument_proche
+  xmlns CDATA #FIXED ''
+  type_radius CDATA #REQUIRED>
