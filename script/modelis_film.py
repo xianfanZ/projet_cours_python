@@ -2,18 +2,19 @@
 
 from lxml import etree
 
-def delet_deo_vide():
+def delet_geo_vide():
 	n = 1
-	file = "/Users/wangyizhe/Desktop/projetPy/film_changed.xml"
-	tree = etree.parse("/Users/wangyizhe/Desktop/projetPy/film2011.xml")
-	node_geos = tree.xpath("/tournagesdefilmsparis2011/film/geo_coordinates")
+	file = "../xml/film_changed.xml" #créer un nouveau fichier
+	tree = etree.parse("../xml/film2011.xml") # parser le fichier xml à traiter
+	node_geos = tree.xpath("/tournagesdefilmsparis2011/film/geo_coordinates")#aller au noeud "geo_coordinates"
 	for node_geo in node_geos:
-		if node_geo.text == None:
-			parent_node = node_geo.getparent()
-			print (parent_node)
-			parent_node.clear()
+		if node_geo.text == None: # si le noeud geo_coordinates" est vide
+			parent_node = node_geo.getparent()# aller à son noeud parent "film"
+			#print (parent_node)
+			parent_node.clear() #enlever tous les noeud fils du noeud "film"
+	#enlever les noeud "film" vide
 	for film in tree.xpath("/tournagesdefilmsparis2011/film"):
-		if len(film) == 0:
+		if len(film) == 0: 
 			film.getparent().remove(film)
 		else:
 			film.set('id', str(n))
@@ -21,18 +22,19 @@ def delet_deo_vide():
 	tree.write(file)
 
 def separat_geo():
-	delet_deo_vide()
-	file_xml_final = "/Users/wangyizhe/Desktop/projetPy/film_final.xml"
-	tree = etree.parse("/Users/wangyizhe/Desktop/projetPy/film_changed.xml")
+	delet_geo_vide()
+	file_xml_final = "../xml/film_final.xml"
+	tree = etree.parse("../xml/film_changed.xml")
 	node_geos = tree.xpath("/tournagesdefilmsparis2011/film/geo_coordinates")
+	#séparer le géocoord.
 	for node_geo in node_geos:
-		geo1, geo2 = node_geo.text.split(",")
+		geo1, geo2 = node_geo.text.split(",")#séparer les geocoord
 		parent_node = node_geo.getparent()
-		parent_node.remove(node_geo)
+		parent_node.remove(node_geo)# enlever le noeud geo_coordinates
 		#node = etree.Element(parent_node)
-		child1 = etree.SubElement(parent_node, "geo1")
+		child1 = etree.SubElement(parent_node, "geo1") #ajouter un nouveau noeud comme fils du noeud film
 		child2 = etree.SubElement(parent_node, "geo2")
-		child1.text = geo1
+		child1.text = geo1 
 		child2.text = geo2
-	tree.write(file_xml_final)
+	tree.write(file_xml_final) #write le résultat dans un nouveau fichier
 separat_geo()
