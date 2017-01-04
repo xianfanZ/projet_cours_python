@@ -75,7 +75,10 @@ def extract_coord_dico(dicomon):
 		for monument in dicomon[etiquette]:
 			if monument not in prob:
 				location = geolocatorOSM.geocode(monument)
-				mon_coord.append((monument, location.latitude, location.longitude))
+				if location:
+					mon_coord.append((monument, location.latitude, location.longitude))
+				else:
+					print(monument)
 		dico_coord[etiquette] = mon_coord
 	return dico_coord
 

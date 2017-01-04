@@ -45,6 +45,10 @@ def main():
     carte_monuments = mark_tournage(mark_monuments("../xml/monuments_coord.xml"),"../xml/film_final.xml")
     print("Réussir à créer la carte!")
     carte_monuments.save('../cartes/carte_monuments_tournages.html')
+    print("Projection des monuments et les tournages filtrés dans une carte...")
+    carte_tournages_filtres = mark_tournage(mark_monuments("../xml/monuments_coord.xml"),"../xml/filter_coord_films.xml")
+    print("Réussir à créer la carte!")
+    carte_tournages_filtres.save('../cartes/carte_monuments_tournages_filtrés.html')
     print("Fin")
 if __name__ == '__main__':
     main()
