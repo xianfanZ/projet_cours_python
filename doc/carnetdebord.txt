@@ -24,10 +24,13 @@ Amélioration de la documentation.
 Nettoyage liste de monuments (sélection des lieux pertinents pour notre projet, élimination des lieux qui ne sont pas intramuros, etc). 
 
 08/12
-Script de nettoyage des films sans geo-coordonnées ('enlever_sans_coord_film.py').
+Script de nettoyage des films sans geo-coordonnées ('enlever_sans_coord_film.py'). Résultat sur 'films_changed.xml'. 
+Nº de tournages avant nettoyege: 8593.
+Nº de tournages après nettoyege: 6804.
+Perte 21%.
 
 14/12
-Script de modélisation des geo-coordonnées en deux elements différents ('modelis_coor_film.py').
+Script de modélisation des geo-coordonnées en deux elements différents ('modelis_coor_film.py'). Résultat 'films_final.xml'.
 
 15/12
 Architecture du projet.
@@ -39,8 +42,8 @@ Abandon de l'obtention des géocoordonnées des monuments à partir de monuments
 (plus de la moitié des monuments ne sont pas présents!). Obtention des coordonnées de tous les monuments avec geopy (script 'traite_monuments.py', résultat 'monuments_coord.geojson').
 
 18/12
-Élaboration des cartes. Abandon du fichier 'monuments_coord.geojson' pour une version en xml ('monuments_coord.geojson').
-Grammaires pour films_final.xml
+Élaboration des cartes. Abandon du fichier 'monuments_coord.geojson' pour une version en xml ('monuments_coord.xml').
+Grammaires pour films_final.xml.
 
 19/12
 Correction coordonnées Hôtel de Ville, Place de la Concorde, Pont Neuf. Élimination monument ambigu (Statue de la Liberté).
@@ -56,8 +59,13 @@ Mis à jour des grammaires pour le nouveau fichier monuments_coord.xml
 
 
 
-04/01
+03/01
+Comment convertir les pixels en mètres? Problème de classe éliminé du module folium (Cirle)?
 
+04/01
+Calcul de la distance entre les monuments et les tournages avec 'filter_new.py'. Résultat sur 'filter_coord_films_new.xml'.
+Obtention d'information supplémentaire sur les films (genre et pays d'origine) avec 'get_info_films.py'. Résultat sur 'films_genre_pays.xml'
+Construction du tableau de résultats avec 'tableau_resultat.py'. Résultat sur 'tableau.html'.
 
 05/01
 Deadline XML.
