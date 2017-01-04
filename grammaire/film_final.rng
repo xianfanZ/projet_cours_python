@@ -13,6 +13,9 @@
     
     <define name="film">
         <element name="film">
+            <attribute name="id">
+                <data type="integer"/>
+            </attribute>
             <group>
                 <ref name="Titre"/>
                 <ref name="Realisateur"/>

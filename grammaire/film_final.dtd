@@ -2,6 +2,7 @@
 
 <!ELEMENT tournagesdefilmsparis2011 (film)+>
 <!ELEMENT film (Titre, Realisateur, Date_Debut_Evenement, Date_Fin_Evenement, Cadre, Lieu, Adresse, Arrondissement, Adresse_complete, geo1, geo2)>
+<!ATTLIST film id CDATA #REQUIRED>
 <!ELEMENT Titre (#PCDATA)>
 <!ELEMENT Realisateur (#PCDATA)>
 <!ELEMENT Date_Debut_Evenement (#PCDATA)>
