@@ -174,8 +174,21 @@
                 <div class="col-lg-10 col-lg-offset-1">
                     <h4><br>Visualisation</h4>
                     <p>Pour mieux comprendre si un tournage a été fait à proximité d'un monument, nous avons élaboré une projection des monuments et des tournages sur une carte de Paris (<a href = "../script/project_carte.py"> script </a>). Comme certains monuments ont une surface considérable (le Jardin de Luxembourg, par exemple) ou peuvent être vus de loin, comme la Tour Eiffel, nous avons établi quatre niveaux d'influence selon l'importance du monument (en hauteur ou en surface). </p>
-                    <p>Ces niveaux sont representés comme un attribut de chaque monument dans le fichier <a href = "../xml/monuments_coord.xml">monuments_coord.xml</a>). Cet attribut a été ensuite pris en compte pour définir différentes longueurs de radius pour la projection dans une nouvelle carte et pour calculer la distance entre le monument et les tournages. Si la distance était inférieure à 500m, le tournage a été considéré comme proche au monument (<a href = "../script/filter_new.py"> script </a>).</p>
+                    <p>Ces niveaux sont representés comme un attribut de chaque monument dans le fichier <a href = "../xml/monuments_coord.xml">monuments_coord.xml</a>). Cet attribut a été ensuite pris en compte pour définir différentes longueurs de radius calculer la distance entre le monument et les tournages. Si la distance était inférieure à 500m, le tournage a été considéré comme proche au monument (<a href = "../script/filter_new.py"> script </a>). Le résultat du filtrage des tournages par proximité a été projecté dans une nouvelle carte.</p><br>
 
+                    <h4><br>Difficultés</h4>
+                    <p>1. Données des coordonnées des monuments</p>
+                    <p>Commes les données des coordonnées des monuments obtenus initialement sur <a href="http://opendata.paris.fr" target="_blank">http://opendata.paris.fr</a> et sur <a href="http://www.data.gouv.fr" target="_blank">http://www.data.gouv.fr</a> étaient insuffissants, on a du les abandonner et obtenir les coordonnées à travers une API. Cette méthode s'est avéré très rapide et efficace. </p>
+                    <p>2. Utilisation de modules</p>
+                    <p>Nous nous sommes servies de plusieurs modules (<a href="#part4">voir section suivante</a>) pour ce projet. Cela est censé faciliter le travail, mais quand la documentation du module est insuffissante ou n'est pas au jour, on peut rencontrer des problèmes. C'est ce qui s'est passé avec la classe Circle du module 'folium', qu'on voulait utiliser pour projecter des cercles autour des monuments mais qui avait été éliminée du module.</p> 
+                    <p>Nous avons remplacé cette classe par CircleMaker, qui construit des cercles aussi mais il a fallu calculer l'équivalence entre pixels et mètres pour pouvoir s'en servir.</p>
+                </div>
+            </div>
+
+            <!--bouton-->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="resultats.html#part1" class="btn btn-lg btn-outline">CARTES</a>
                 </div>
             </div>
         </div>
