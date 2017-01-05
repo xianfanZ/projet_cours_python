@@ -137,7 +137,27 @@
                                                             <p><a href="https://www.data.gouv.fr/fr/datasets/monuments-historiques-francais-1/" target="_blank">monuments.json</a><p>
                                                             <p><a href="http://www.data.gouv.fr/fr/datasets/liste-des-coordonnees-gps-des-monuments-nationaux/" target="_blank">Ressource sans nom.ods</a><p>
                                                             <p>Pour le fichier contenant la liste de monuments, on le fait par la main et les noms des monuments sont trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>et le fichier momument est <a href="../data/liste_de_monuments.txt" target="_blank">liste_de_monuments.txt.</a><p>
-	
+					<h4><br>Traitements</h4>
+                                                            <p>A. Les données sur les monuments (<a href = "../script/traite_monuments.py"> script </a>)</p>
+                                                            <p>Créer la liste de momuments par la main, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson.</p>
+                                                            <p> - Récupérer les noms des momuments à Paris</p>
+                                                            <p> - Éliminer par la main des lieux qui ne sont pas intramuros, etc. Par ex. Les Champs Elysée</p>
+                                                            <p> - Ajouter les coordonnées des monuments en utilisant les API de Open Street Maps et GeoNames</p>
+                                                            <p> - Transformation en format geoJson</p>
+                                                            <p> - Transformation en format xml </p>
+                                                            <p> - Établir la grammaire DTD et relaxng</p>
+
+                                                            <p><br>B. Les données pour les films (<a href = "../script/modelis_film.py"> script </a>)</p>
+                                                            <p> Le fichier d'origine est en format XML et finalement, deux fichiers en format xml et un fichier en format Geojson sont générés.</p>
+                                                            <p> - Élinimer les noeuds films qui n'ont pas les coordonnées</p>
+                                                            <p> - Séparer les coordonées en deux noeuds</p>
+                                                            <p> - Eliminer les lieux de tournage qui ne sont proches à aucun monument (<a href = "../script/modelis_film.py"> script </a>)</p>
+                                                            <p> - Ajouter le nom du monument comme un nouveau noeud du noeud film restant et ajouter "type_radius" comme l'attribut (<a href = "../script/filter_new.py"> script </a>)</p>
+                                                            <p> - Transformation en Geojson (<a href = "../script/filter_new.py"> script </a>)</p>
+
+                                                            <p><br>C. Les données sur le genre et le pays d'origine du film (<a href = "../script/get_info_films.py"> script </a>)</p>
+                                                            <p>Le fichier sortie est en format xml</p>
+                                                            <p> - Faire un programme pour récupérer le genre et le pays d'origine du film qui existe dans notre fichier de film en utilisant APIs</p>	
                 </div>
             </div>
         </div>
