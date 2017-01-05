@@ -66,10 +66,8 @@
                         <a href="#part4">Implémentations</a>
                     </li>
                     <li class="page-scroll">
-                        <a href="#part5">Résultats</a>
+                        <a href="#part5">Analyse</a>
                     </li>
-                    <li class="page-scroll">
-                        <a href="#part6">Analyse</a>
 
                 </ul>
             </div>
@@ -174,7 +172,10 @@
             </div>
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <p>Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, </p>
+                    <h4><br>Visualisation</h4>
+                    <p>Pour mieux comprendre si un tournage a été fait à proximité d'un monument, nous avons élaboré une projection des monuments et des tournages sur une carte de Paris (<a href = "../script/project_carte.py"> script </a>). Comme certains monuments ont une surface considérable (le Jardin de Luxembourg, par exemple) ou peuvent être vus de loin, comme la Tour Eiffel, nous avons établi quatre niveaux d'influence selon l'importance du monument (en hauteur ou en surface). </p>
+                    <p>Ces niveaux sont representés comme un attribut de chaque monument dans le fichier <a href = "../xml/monuments_coord.xml">monuments_coord.xml</a>). Cet attribut a été ensuite pris en compte pour définir différentes longueurs de radius pour la projection dans une nouvelle carte et pour calculer la distance entre le monument et les tournages. Si la distance était inférieure à 500m, le tournage a été considéré comme proche au monument (<a href = "../script/filter_new.py"> script </a>).</p>
+
                 </div>
             </div>
         </div>
@@ -215,7 +216,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h2>Résultats</h2>
+                    <h2>Analyse</h2>
                     <hr class="star-light">
                 </div>
             </div>
@@ -231,28 +232,6 @@
             </div>
         </div>
     </section>
-
-
-    <!-- Text 6 Section -->
-    <section class="container" id="part6">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h2>Analyse</h2>
-                    <hr class="star-primary">
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-10 col-lg-offset-1">
-                    <p>Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, Je suis un text, </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-	
 
     <!-- Footer -->
     <footer class="text-center">
