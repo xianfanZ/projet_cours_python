@@ -2,18 +2,18 @@
 
 from geopy.distance import vincenty
 from lxml import etree
-"""on va éliminer les leux de tournage qui ne sont proche à aucun film"""
+
+"""on va éliminer les leux de tournage qui ne sont proche à aucun monument"""
 
 def get_coor_monuments():
-
 	"""créer un dico dont la clé est le type de momument, la valeur est une liste de coordonnées
 	return (dico)"""
 
 	dico = {}
-	tree_monuments = etree.parse("../xmlmonuments_coord.xml") #parser le fichier xml de momuents 
-	nodes_monu = tree_monuments.xpath("/monuments/monument") # aller dans les noeuds momument
+	tree_monuments = etree.parse("../xml/monuments_coord.xml") #parser le fichier xml de monuments 
+	nodes_monu = tree_monuments.xpath("/monuments/monument") # aller dans les noeuds monument
 	for monument in nodes_monu: # pour chaque noeud monument
-		name = [name.text for name in monument.iterchildren(tag="name")][0] #obtenir la lise de noms des monuments
+		name = [name.text for name in monument.iterchildren(tag="name")][0] #obtenir la liste de noms des monuments
 		#print (name)
 		p1 = None
 		attribut = monument.get('espace') #obtenir le type de radius
@@ -28,7 +28,7 @@ def get_coor_monuments():
 
 def get_idfilm_far(standard):
 
-	"""éliminer les noueds films sui ne sont proche à aucun monument selon l'id du film"""
+	"""éliminer les noeuds films sui ne sont proche à aucun monument selon l'id du film"""
 
 	file = "../xml/filter_coord_films_new.xml"# créer un nouveau fichier pour le résultat
 	tree= etree.parse("../xml/film_final.xml")

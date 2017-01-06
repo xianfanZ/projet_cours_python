@@ -1,8 +1,10 @@
 #-*- coding: utf-8 -*-
 #python3
 
-# Obtention de plus d'informations sur les films qui sont à proximité des monuments
-# Installer omdb wrapper https://github.com/dgilland/omdb.py 
+# Obtention de plus d'informations sur les tournages qui sont à proximité des monuments
+# Usage : python3 get_info_films.py
+# Installer omdb wrapper (https://github.com/dgilland/omdb.py)
+# Résultat : films_genre_pays.xml
 
 from lxml import etree
 import omdb
@@ -23,13 +25,12 @@ def get_info_film(fichier):
 		rel = tree.xpath("//film/Realisateur") 
 		for titre, realisateur in zip(ti, rel):
 			films.append( (titre.text, realisateur.text) )
-		# nouveau fichier xml avec infos de genre et pays
-		
 		print("Obtention du genre et du pays d'origine depuis OMBD...")
-		# requete sur OMDB pour obtenir plus d'infos sur chaque film
-		# on cherche par directeur aussi pour eviter deux films différents avec le meme titre
+
 		genres= []
 		payss= []
+		# requete sur OMDB pour obtenir plus d'infos sur chaque film
+		# on cherche par directeur aussi pour eviter deux films différents avec le meme titre
 		for film, realisateur in films:	
 			res = omdb.request(t=film, director=realisateur) 
 			infofilm = json.loads( (res.content).decode("utf-8") )
@@ -46,11 +47,11 @@ def get_info_film(fichier):
 				payss.append(pays)
 		print("Fin.")
 		return genres, payss
-		sortie.close()
 
 
 def ajoute_newinfo(liste1, liste2):
 	entree = open("../xml/film_final.xml", "r")
+	# nouveau fichier xml avec infos de genre et pays
 	sortie = "../xml/films_genre_pays.xml"
 	tree = etree.parse(entree)
 	node_films = tree.xpath("/tournagesdefilmsparis2011/film")
@@ -60,11 +61,14 @@ def ajoute_newinfo(liste1, liste2):
 		node_genre.text = genre  
 		node_pays.text = pays
 	tree.write(sortie)
+	entree.close()
+	sortie.close()
 
 
 def main():
-	g, p = get_info_film("/Users/nidiahernandez/Desktop/projet_cours_python/xml/film_final.xml")
+	g, p = get_info_film("../xml/film_final.xml")
 	ajoute_newinfo(g, p)
+
 if __name__ == '__main__':
 	main()
 

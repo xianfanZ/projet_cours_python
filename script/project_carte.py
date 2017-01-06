@@ -1,6 +1,11 @@
 import xml.etree.ElementTree as ET
 import folium
 
+# Projection des monuments et des tournages dans une carte
+# Usage : python3 project_carte.py
+# Installer folium (https://github.com/python-visualization/folium)
+# Données source : monuments_coord.xml, film_final.xml et filter_coord_films.xml
+# Résultat : carte_monuments_tournages.html (tous les tournages) et carte_monuments_tournages_filtrés.html (tournages proches)
 
 def mark_monuments(nomfichier):
     """

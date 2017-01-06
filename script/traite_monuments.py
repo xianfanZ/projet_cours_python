@@ -2,12 +2,15 @@
 #python3
 
 # Obtention geocoordonnées des monuments parisiens choisis
-# Modélisation en geojson et xml
+# Modélisation en geojson (obsolète) et xml
 # Usage : python3 traite_monuments.py
+# Installer geopy (https://github.com/geopy/geopy)
+# Résultat : monuments_coord.xml
 
 from geopy.geocoders import Nominatim
 from geopy.geocoders import GeoNames
-import re,collections
+import re
+import collections
 
 def my_monuments_list(nomfichier):
 	"""
@@ -82,7 +85,7 @@ def extract_coord_dico(dicomon):
 		dico_coord[etiquette] = mon_coord
 	return dico_coord
 
-def modelis_coord_geojson(listemoncoord):
+def modelis_coord_geojson(listemoncoord): # OBSOLÈTE
 	"""
 	Construit un fichier geojson de monuments choisis et geocoordonnées
 	arg : liste des monuments et coordonnées

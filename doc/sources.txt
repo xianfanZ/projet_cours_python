@@ -1,5 +1,6 @@
+http://stackoverflow.com
 http://geojson.org
 https://github.com/geopy/geopy
+http://geopy.readthedocs.io/en/1.10.0/
 http://wiki.openstreetmap.org/wiki/Zoom_levels
-http://stackoverflow.com
 https://github.com/python-visualization/folium/issues/415

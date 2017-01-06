@@ -1,5 +1,12 @@
 # -*- coding: utf-8 -*-
 
+# Modélisation xml des tournages : 
+# 1. filtrage des films qui n'ont pas des coordonnées,
+# 2. split du noeud coordonnées en 2 (un pour latitude, un autre pour longitude)
+# Usage : python3 get_info_films.py
+# Installer lxml (http://lxml.de/index.html)
+# Résultat : ../xml/film_final.xml
+
 from lxml import etree
 
 def delet_geo_vide():

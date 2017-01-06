@@ -1,4 +1,9 @@
-#coding:utf-8
+# -*- coding: utf-8 -*-
+
+# Construction du tableau de résultats
+# Usage : python3 tableau_resultat.py
+# Installer lxml (http://lxml.de/index.html)
+# Résultat : ../web/tableu.html
 
 from lxml import etree
 from collections import OrderedDict

@@ -25,8 +25,8 @@ Nettoyage liste de monuments (sélection des lieux pertinents pour notre projet,
 
 08/12
 Script de nettoyage des films sans geo-coordonnées ('enlever_sans_coord_film.py'). Résultat sur 'films_changed.xml'. 
-Nº de tournages avant nettoyege: 8593.
-Nº de tournages après nettoyege: 6804.
+Nº de tournages avant nettoyage: 8593.
+Nº de tournages après nettoyage: 6804.
 Perte 21%.
 
 14/12
@@ -63,7 +63,8 @@ Mis à jour des grammaires pour le nouveau fichier monuments_coord.xml
 Comment convertir les pixels en mètres? Problème de classe éliminé du module folium (Cirle)?
 
 04/01
-Calcul de la distance entre les monuments et les tournages avec 'filter_new.py'. Résultat sur 'filter_coord_films_new.xml'.
+Calcul de la distance entre les monuments et les tournages et élimination des tournages qui ne sont pas à moins de 500m avec 'filter_new.py'. Résultat sur 'filter_coord_films.xml'.
+Ajout d'information du monument proche au fichier des tournages avec 'filter_new.py'. Résultat sur 'filter_coord_films_new.xml'
 Obtention d'information supplémentaire sur les films (genre et pays d'origine) avec 'get_info_films.py'. Résultat sur 'films_genre_pays.xml'
 Construction du tableau de résultats avec 'tableau_resultat.py'. Résultat sur 'tableau.html'.
 
