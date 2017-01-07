@@ -62,7 +62,7 @@
                     <li class="page-scroll">
                         <a href="#part3">Méthodes</a>
                     </li>
-					<li class="page-scroll">
+                    <li class="page-scroll">
                         <a href="#part4">Implémentations</a>
                     </li>
                     <li class="page-scroll">
@@ -111,7 +111,7 @@
 
 
 
-	<!-- Text 2 Section -->
+    <!-- Text 2 Section -->
     <section class="container" id="part2">
         <div class="container">
             <div class="row">
@@ -122,35 +122,36 @@
             </div>
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-					<h4>Données d'origine</h4>
-					<p><br>Il y a deux sources principales pour nos données d'origine: </p>
-                    			<p>1. <a href="http://opendata.paris.fr" target="_blank">http://opendata.paris.fr</a><p>
-                    			<p>2. <a href="https://www.omdbapi.com" target="_blank">https://www.omdbapi.com</a><p>                                                
-					<p>Toutes les donées sur ces sites sont "open sources" et on peut faire le text mining sur ces donées légalement.<br></p>
-					<p>Les données sur le site de "OMDB" sont été récupérées en utilisant APIs. Celles sur l'autre site sont déjà modélisées en plusieurs formats et on a choisi le fichier en format XML.</p>
-                                        <p><a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a><p>                                                
-                                        <p>Pour le fichier contenant la liste de monuments, on l'a fait par la main et les noms des monuments sont trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>et le fichier momument est <a href="../data/liste_de_monuments.txt" target="_blank">liste_de_monuments.txt.</a><p>
-					<h4><br>Traitements</h4>
+                    <h4>Données d'origine</h4>
+                    <p><br>Il y a trois sources principales pour nos données d'origine: </p>
+                    <p>1. <a href="http://opendata.paris.fr" target="_blank">opendata.paris.fr</a> pour les tournages<p>
+                    <p>2. <a href="http://www.openstreetmap.org" target="_blank">www.openstreetmap.org</a> pour les monuments<p>
+                    <p>3. <a href="https://www.omdbapi.com" target="_blank">www.omdbapi.com</a> pour des informations extra sur les tournages<p><br>
+                    <p>Toutes les donées sur ces sites sont "open source" et on peut faire le data mining sur ces donées légalement.</p>
+                    <p> Les données sur les tournages sont déjà modélisées en plusieurs formats. Nous avons choisi la modélisation xml <a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a>.</p><br>
+                    <p>Les données des monuments ont été récupérées en utilisant l'API d'Open Street Maps. Nous avons définie manuellement une <a href="../data/liste_de_monuments.txt" target="_blank">liste de monuments</a> à partir des monuments trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>. Pour les difficultés rencontrées pour l'obtention des données des monuments, voir la section <a href="#part3">Méthodes</a>.</p>
+                    
+                    <h4><br>Traitements</h4>
                                                     <p>A. Les données sur les monuments (<a href = "../script/traite_monuments.py"> script </a>)</p>
-                                                    <p>Créer la liste de momuments par la main, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson.</p>
-                                                    <p> - Récupérer les noms des momuments à Paris</p>
-                                                    <p> - Éliminer par la main des lieux qui ne sont pas intramuros, etc. Par ex. Les Champs Elysée</p>
+                                                    <p>Créer la liste de monuments par la main, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson. Étapes :</p>
+                                                    <p> - Récupérer les noms des monuments à Paris</p>
+                                                    <p> - Éliminer par la main des lieux qui ne sont pas intramuros. Par ex. Marché de Rungis</p>
                                                     <p> - Ajouter les coordonnées des monuments en utilisant les API de Open Street Maps et GeoNames</p>
-                                                    <p> - Transformation en format geoJson</p>
-                                                    <p> - Transformation en format xml </p>
+                                                    <p> - Modélisation en format geoJson</p>
+                                                    <p> - Modélisation en format xml </p>
                                                     <p> - Établir la grammaire DTD et relaxng</p>
 
-                                                    <p><br>B. Les données pour les films (<a href = "../script/modelis_film.py"> script </a>)</p>
-                                                    <p> Le fichier d'origine est en format XML et finalement, deux fichiers en format xml et un fichier en format Geojson sont générés.</p>
-                                                    <p> - Élinimer les noeuds films qui n'ont pas les coordonnées</p>
+                                                    <p><br>B. Les données sur les tournages (<a href = "../script/modelis_film.py"> script </a>)</p>
+                                                    <p> Le fichier d'origine est en format XML et finalement, deux fichiers en format xml et un fichier en format Geojson sont générés. Étapes :</p>
+                                                    <p> - Élimineer les noeuds films qui n'ont pas les coordonnées</p>
                                                     <p> - Séparer les coordonées en deux noeuds</p>
-                                                    <p> - Eliminer les lieux de tournage qui ne sont proches à aucun monument (<a href = "../script/filter_new.py"> script </a>)</p>
-                                                    <p> - Ajouter le nom du monument comme un nouveau noeud du noeud film restant et ajouter "type_radius" comme l'attribut (<a href = "../script/filter_new.py"> script </a>)</p>
+                                                    <p> - Éliminer les lieux de tournage qui ne sont proches d'aucun monument (<a href = "../script/filter_new.py"> script </a>)</p>
+                                                    <p> - Ajouter le nom du monument proche comme un nouveau noeud du noeud film restant et ajouter "type_radius" comme l'attribut (<a href = "../script/filter_new.py"> script </a>)</p>
                                                     <p> - Transformation en Geojson (<a href = "../script/geojson_film.py"> script </a>)</p>
 
                                                     <p><br>C. Les données sur le genre et le pays d'origine du film (<a href = "../script/get_info_films.py"> script </a>)</p>
-                                                    <p>Le fichier sorti est en format xml</p>
-                                                    <p> - Faire un programme pour récupérer le genre et le pays d'origine du film qui existe dans notre fichier de film en utilisant APIs</p><br><br>
+                                                    <p> - Faire un programme pour récupérer le genre et le pays d'origine du film qui existe dans notre fichier de film en utilisant APIs</p>
+                                                    <p>Ajouter ces informations comme deux noeuds supplémentaires dans l'arbre xml de tournages</p><br><br>
                 </div>
             </div>
             <!--bouton-->
@@ -174,15 +175,15 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <h4><br>Visualisation</h4>
-                    <p>Pour mieux comprendre si un tournage a été fait à proximité d'un monument, nous avons élaboré une projection des monuments et des tournages sur une carte de Paris (<a href = "../script/project_carte.py"> script </a>). Comme certains monuments ont une surface considérable (le Jardin de Luxembourg, par exemple) ou peuvent être vus de loin, comme la Tour Eiffel, nous avons établi quatre niveaux d'influence selon l'importance du monument (en hauteur ou en surface). </p>
-                    <p>Ces niveaux sont representés comme un attribut de chaque monument dans le fichier <a href = "../xml/monuments_coord.xml">monuments_coord.xml</a>). Cet attribut a été ensuite pris en compte pour définir différentes longueurs de radius calculer la distance entre le monument et les tournages. Si la distance était inférieure à 500m, le tournage a été considéré comme proche au monument (<a href = "../script/filter_new.py"> script </a>). Le résultat du filtrage des tournages par proximité a été projecté dans une nouvelle carte.</p><br>
-
+                    <p>Pour mieux comprendre si un tournage a été fait à proximité d'un monument, nous avons élaboré une projection des monuments et des tournages sur une carte de Paris (<a href = "resultats.html#part1"> carte 1 </a>). Comme certains monuments ont une surface considérable (le Jardin de Luxembourg, par exemple) ou peuvent être vus de loin, comme la Tour Eiffel, nous avons établi quatre niveaux d'influence selon l'importance du monument (en hauteur ou en surface). </p>
+                    <p>Ces niveaux sont representés comme un attribut de chaque monument dans le fichier <a href = "../xml/monuments_coord.xml">monuments_coord.xml</a>). Cet attribut a été ensuite pris en compte pour définir différentes longueurs de radius et calculer la distance entre le monument et les tournages. Si la distance était inférieure à 500m, le tournage a été considéré comme proche au monument (<a href = "../script/filter_new.py"> script </a>). Le résultat du filtrage des tournages par proximité a été projecté dans une nouvelle carte (<a href = "resultats.html#part2"> carte 2 </a>).</p><br>
                     <h4><br>Difficultés</h4>
-                    <p>1. Données des coordonnées des monuments</p>
-                    <p>Commes les données des coordonnées des monuments obtenus initialement sur <a href="http://opendata.paris.fr" target="_blank">http://opendata.paris.fr</a> et sur <a href="http://www.data.gouv.fr" target="_blank">http://www.data.gouv.fr</a> étaient insuffissants, on a du les abandonner et obtenir les coordonnées à travers une API. Cette méthode s'est avéré très rapide et efficace. </p></br>
+                    <p>1. Obtention des coordonnées des monuments</p>
+                    <p>Initialement on voulait obtenir les coordonnées des monuments à partir des informations sur <a href="http://opendata.paris.fr" target="_blank">opendata.paris.fr</a> et sur <a href="http://www.data.gouv.fr" target="_blank">data.gouv.fr</a>. Comme les données disponibles sur ces sites (<a href="https://www.data.gouv.fr/fr/datasets/monuments-historiques-francais-1/" target="_blank">monuments.json et </a><a href="http://www.data.gouv.fr/fr/datasets/liste-des-coordonnees-gps-des-monuments-nationaux/" target="_blank">Ressource sans nom.ods</a>) étaient insuffissantes et difficiles à traiter par programme (fichier ods), on a dû les abandonner et obtenir les coordonnées à travers l'API d'Open Street Maps (voir <a href="#part4">Implémentations</a>).</p>
+                    <p>Cette méthode s'est avéré très rapide et efficace. Pourtant, comme les coordonnées obtenues pour certains monuments étaient érronées (Hôtel de Ville, Place de la Concorde et Pont Neuf situés hors Paris), nous avons complété cette partie avec GeoNames.</p></br>
                     <p>2. Utilisation de modules</p>
-                    <p>Nous nous sommes servies de plusieurs modules (<a href="#part4">voir section suivante</a>) pour ce projet. Cela est censé faciliter le travail, mais quand la documentation du module est insuffissante ou n'est pas au jour, on peut rencontrer des problèmes. C'est ce qui s'est passé avec la classe Circle du module 'folium', qu'on voulait utiliser pour projecter des cercles autour des monuments mais qui avait été éliminée du module.</p> 
-                    <p>Nous avons remplacé cette classe par CircleMaker, qui construit des cercles aussi mais il a fallu calculer l'équivalence entre pixels et mètres pour pouvoir s'en servir.</p><br/><br/>
+                    <p>Nous nous sommes servies de plusieurs modules (voir <a href="#part4">Implémentations</a>) pour ce projet. Cela a facilité plusieurs étapes du travail, mais quand la documentation d'un module est insuffissante ou n'est pas au jour, on peut rencontrer des problèmes. C'est ce qui s'est passé avec la classe 'Circle' du module 'folium', qu'on voulait utiliser pour projecter des cercles autour des monuments mais qui avait été éliminée du module.</p> 
+                    <p>Nous avons remplacé cette classe par 'CircleMaker', qui construit des cercles aussi mais il a fallu calculer l'équivalence entre pixels et mètres pour pouvoir s'en servir.</p><br/><br/>
                 </div>
             </div>
 
@@ -195,7 +196,7 @@
         </div>
     </section>
 
-	<!-- Text 4 Section -->
+    <!-- Text 4 Section -->
     <section class="container" id="part4">
         <div class="container">
             <div class="row">
@@ -210,10 +211,11 @@
                     <p><a herf="https://docs.python.org/2/library/xml.etree.elementtree.html">The ElementTree XML API</a></p>
                     <p><a href="https://docs.python.org/2/library/json.html">JSON encoder and decoder</a></p>
                     <br/>
+                    <h4>Obtention des coordonnées géographiques des monuments</h4>
+                    <p><a href="http://api.openstreetmap.org">Open Street Maps API</a></p>
+                    <p><a href="http://api.geonames.org/">GeoNames API</a></p><br/>
                     <h4>Traitement de coordonnées géographiques</h4>
                     <p><a href="https://github.com/geopy/geopy">GeoPy</a></p><br/>
-                    <!-- LIEN API GEONAMES-->
-                    <!-- LIEN API OSM http://api.openstreetmap.org-->
                     <h4>Projection des cartes</h4>
                     <p><a href="https://github.com/python-visualization/folium">Folium</a></p><br/>
                     <h4>Récupération plus d'informations sur les films</h4>
@@ -229,7 +231,7 @@
         </div>
     </section>
 
-	<!-- Text 5 Section -->
+    <!-- Text 5 Section -->
     <section class="success" id="part5">
         <div class="container">
             <div class="row">
@@ -238,19 +240,20 @@
                     <hr class="star-light">
                 </div>
             </div>
+             <!-- bouton -->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="resultats.html#part3" class="btn btn-lg btn-outline">TABLEAU DE RÉSULTATS</a>
+                </div>
+            </div>
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
-                    <h4>Analyse du tableau (<a href = "tableau.html"> tableau </a>)</h4>
+                    <br/><br/><h4>Analyse du tableau</h4>
                     <p> 1. Selon le tableau, on peut dire qu'il y a une corrélation entre la réputation du monument et le choix du lieu de tournage. </p>
                     <p>Les tops huit monuments les plus aimés pour tourner les films sont Notre-Dame de Paris, Sacré-Coeur, Tour Eiffel, Opéra Garnier, Canal Saint Martin, Pont Alexandre III, Pont des Arts, Moulin Rouge. Ce sont des monuments très connus dans le monde entier. Surtout les tops trois, ce sont les représentants de Paris. Et les momuments ayant moins de lieux de tournage autours sont généralement moins connus au monde.</p>
                     <p>2. Mais il y a quand même des points innatendus dans le résultat. Par ex., Musée d'Orsay et Palais d'Elysée sont très connus au public. Mais ils ont un poucentage très bas. C'est parce que sauf la réputation du monument, il y a d'autres facteurs qui infuencent le choix. Par ex., comme la Palais d'Elysée n'ouvre pas au public dans la plupart du temps et on ne voit pas de grande chose en dehors de la palais, ce n'est pas étonnant qu'on ne le choisit pas souvent comme le lieu de tournage.</p>
                     <p>3. On a aussi classé les monuments selon leur superface. Bien que ce ne soit pas évident, on peut quand même remarqué que les monuments qui ont la surface la plus petite ont tendance d'avoir moins de lieux de tournage qui sont autours d'eux. Cependant, on peut aussi penser que cette remarque n'est pas pertinente. Parce que cette remarque n'est pas générale. Par ex., le Jardin des Plantes a une surface assez grande, mais peu de films ont été tournés là-bas. </p>
                 </div>
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="resultats.html#part3" class="btn btn-lg btn-outline">PROGRAMMES ET RÉSULTATS</a>
-                </div>
-            </div>
             </div>
         </div>
     </section>
