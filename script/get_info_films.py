@@ -26,9 +26,8 @@ def get_info_film(fichier):
 		for titre, realisateur in zip(ti, rel):
 			films.append( (titre.text, realisateur.text) )
 		print("Obtention du genre et du pays d'origine depuis OMBD...")
-
-		genres= []
-		payss= []
+		genres= [] #liste de genres de tous les tournages
+		payss= [] #liste de pays de tous les tournages
 		# requete sur OMDB pour obtenir plus d'infos sur chaque film
 		# on cherche par directeur aussi pour eviter deux films différents avec le meme titre
 		for film, realisateur in films:	
@@ -43,6 +42,7 @@ def get_info_film(fichier):
 			except KeyError:
 				pays = "N/A"
 			finally:
+				print(film, genre, pays)
 				genres.append(genre)
 				payss.append(pays)
 		print("Fin.")
@@ -50,26 +50,33 @@ def get_info_film(fichier):
 
 
 def ajoute_newinfo(liste1, liste2):
-	entree = open("../xml/film_final.xml", "r")
+	"""
+	Ajoute deux noeuds à la modélisation des tournages.
+	Args: liste de genres de chaque tournage, liste de pays d'origine de chaque tournage
+	Sortie: modélisation xml pour les tournages avec info de genre et de pays
+	"""
+	# tournages proches d'un monument
+	print("Modélisation des informations obtenues en xml...")
+	entree = open("../xml/filter_coord_films_new.xml", "r")
 	# nouveau fichier xml avec infos de genre et pays
 	sortie = "../xml/films_genre_pays.xml"
 	tree = etree.parse(entree)
+	# ajout de nouvelles infos à chaque tournage
 	node_films = tree.xpath("/tournagesdefilmsparis2011/film")
 	for node, genre, pays in zip(node_films, liste1, liste2):
 		node_genre = etree.SubElement(node, "Genre") # nouveau noeud <Genre>
 		node_pays = etree.SubElement(node, "Pays_origine") # nouveau noeud <Pays>
-		node_genre.text = genre  
+		node_genre.text = genre # contenu du noeud = info obtenu d'OMDB
 		node_pays.text = pays
 	tree.write(sortie)
 	entree.close()
 	sortie.close()
+	print("Voir résultat sur 'filter_coord_films_new.xml'")
 
 
 def main():
-	g, p = get_info_film("../xml/film_final.xml")
+	g, p = get_info_film("../xml/filter_coord_films_new.xml") # Obtention des infos pour les tournages proches d'un monument
 	ajoute_newinfo(g, p)
 
 if __name__ == '__main__':
 	main()
-
-

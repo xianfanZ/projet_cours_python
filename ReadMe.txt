@@ -49,7 +49,7 @@ Site web.
 Données modélisés pour l'analyse de notre problématique.
 - film_changed.xml : information des tournages nettoyée (élimination films sans géolocalisation).
 - film_final.xml : information des tournages modélisée (données des coordonnées divisées en deux éléments différents).
-- films_genre_pays.xml : ajout information supplémentaire sur les tournages (genre et pays d'origine)
 - filter_coord_films.xml : tournages filtrés (élimination des films qui ne sont pas proches d'un monument).
 - filter_coord_films_new.xml : ajout information du monument le plus proche. 
+- films_genre_pays.xml : ajout information supplémentaire sur les tournages (genre et pays d'origine)
 - monuments_coord.xml : monuments avec poids (attribut "espace") et géocoordonnées.

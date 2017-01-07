@@ -40,7 +40,7 @@ def get_idfilm_far(standard):
 		else:
 			for i in standard:
 				if i[0] == film.get("id"):
-					child1= etree.SubElement(film, "Momument_proche", type_radius=i[2])#ajouter les nouveaux noeuds et l'attribut
+					child1= etree.SubElement(film, "Monument_proche", type_radius=i[2])#ajouter les nouveaux noeuds et l'attribut
 					child1.text = i[1] #ajouter le texte entre les balises
 	tree.write(file)
 	

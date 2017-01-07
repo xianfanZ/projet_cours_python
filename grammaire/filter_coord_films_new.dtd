@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!ELEMENT tournagesdefilmsparis2011 (film)+>
+<!ELEMENT film (Titre, Realisateur, Date_Debut_Evenement, Date_Fin_Evenement, Cadre, Lieu, Adresse, Arrondissement, Adresse_complete, geo1, geo2, Monument_proche)>
+<!ATTLIST film id CDATA #REQUIRED>
+<!ELEMENT Titre (#PCDATA)>
+<!ELEMENT Realisateur (#PCDATA)>
+<!ELEMENT Date_Debut_Evenement (#PCDATA)>
+<!ELEMENT Date_Fin_Evenement (#PCDATA)>
+<!ELEMENT Cadre (#PCDATA)>
+<!ELEMENT Lieu (#PCDATA)>
+<!ELEMENT Adresse (#PCDATA)>
+<!ELEMENT Arrondissement (#PCDATA)>
+<!ELEMENT Adresse_complete (#PCDATA)>
+<!ELEMENT geo1 (#PCDATA)>
+<!ELEMENT geo2 (#PCDATA)>
+<!ELEMENT Monument_proche (#PCDATA)>
+<!ATTLIST Monument_proche type_radius CDATA #REQUIRED>

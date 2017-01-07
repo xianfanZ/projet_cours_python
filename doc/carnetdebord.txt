@@ -24,17 +24,17 @@ Amélioration de la documentation.
 Nettoyage liste de monuments (sélection des lieux pertinents pour notre projet, élimination des lieux qui ne sont pas intramuros, etc). 
 
 08/12
-Script de nettoyage des films sans geo-coordonnées ('enlever_sans_coord_film.py'). Résultat sur 'films_changed.xml'. 
+Script de nettoyage des tournages sans geo-coordonnées ('enlever_sans_coord_film.py'). Résultat sur 'films_changed.xml'. 
 Nº de tournages avant nettoyage: 8593.
 Nº de tournages après nettoyage: 6804.
-Perte 21%.
+Perte : 21%.
 
 14/12
 Script de modélisation des geo-coordonnées en deux elements différents ('modelis_coor_film.py'). Résultat 'films_final.xml'.
 
 15/12
 Architecture du projet.
-Transformation du xml des films en json. Quelle structure des données choisir ?
+Transformation du xml des tournages en json. Quelle structure des données choisir ?
 Nettoyage fichiers géolocalisation des monuments (problèmes encodage fichier monuments.json, traitement du contenu textuel monuments.odt).
 
 17/12
@@ -64,12 +64,20 @@ Comment convertir les pixels en mètres? Problème de classe éliminé du module
 
 04/01
 Calcul de la distance entre les monuments et les tournages et élimination des tournages qui ne sont pas à moins de 500m avec 'filter_new.py'. Résultat sur 'filter_coord_films.xml'.
-Ajout d'information du monument proche au fichier des tournages avec 'filter_new.py'. Résultat sur 'filter_coord_films_new.xml'
+Nº de tournages avant filtrage : 6804
+Nº de tournages après filtrage : 1483
+Pourcentage de tournages proches d'un monument : 22%
+Besoin de modifier le xml des tournages pour faire des calculs (merge d'infos des monuments et des tournages sur un seul fichier). Ajout d'information du monument proche au fichier des tournages avec 'filter_new.py'. Résultat sur 'filter_coord_films_new.xml'
 Obtention d'information supplémentaire sur les films (genre et pays d'origine) avec 'get_info_films.py'. Résultat sur 'films_genre_pays.xml'
 Construction du tableau de résultats avec 'tableau_resultat.py'. Résultat sur 'tableau.html'.
+Analyse et construction du site web.
 
 05/01
-Deadline XML.
+Présentation en cours de XML.
+
+07/01
+
+
 
 20/01
 Deadline Python.

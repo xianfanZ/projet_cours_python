@@ -130,31 +130,37 @@
 
 					<p>Toutes les donées sur ces sites sont "open sources" et on peut faire le text mining sur ces donées légalement.<br></p>
 					<p>Les données sur le site de "OMDB" sont été récupérées en utilisant APIs. Celles sur les autres deux sites sont déjà modélisées en plusieurs formats :</p>
-                                                            <p><a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a><p>
-                                                            <p><a href="https://www.data.gouv.fr/fr/datasets/monuments-historiques-francais-1/" target="_blank">monuments.json</a><p>
-                                                            <p><a href="http://www.data.gouv.fr/fr/datasets/liste-des-coordonnees-gps-des-monuments-nationaux/" target="_blank">Ressource sans nom.ods</a><p>
-                                                            <p>Pour le fichier contenant la liste de monuments, on le fait par la main et les noms des monuments sont trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>et le fichier momument est <a href="../data/liste_de_monuments.txt" target="_blank">liste_de_monuments.txt.</a><p>
+                                                    <p><a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a><p>
+                                                    <p><a href="https://www.data.gouv.fr/fr/datasets/monuments-historiques-francais-1/" target="_blank">monuments.json</a><p>
+                                                    <p><a href="http://www.data.gouv.fr/fr/datasets/liste-des-coordonnees-gps-des-monuments-nationaux/" target="_blank">Ressource sans nom.ods</a><p>
+                                                    <p>Pour le fichier contenant la liste de monuments, on le fait par la main et les noms des monuments sont trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>et le fichier momument est <a href="../data/liste_de_monuments.txt" target="_blank">liste_de_monuments.txt.</a><p>
 					<h4><br>Traitements</h4>
-                                                            <p>A. Les données sur les monuments (<a href = "../script/traite_monuments.py"> script </a>)</p>
-                                                            <p>Créer la liste de momuments par la main, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson.</p>
-                                                            <p> - Récupérer les noms des momuments à Paris</p>
-                                                            <p> - Éliminer par la main des lieux qui ne sont pas intramuros, etc. Par ex. Les Champs Elysée</p>
-                                                            <p> - Ajouter les coordonnées des monuments en utilisant les API de Open Street Maps et GeoNames</p>
-                                                            <p> - Transformation en format geoJson</p>
-                                                            <p> - Transformation en format xml </p>
-                                                            <p> - Établir la grammaire DTD et relaxng</p>
+                                                    <p>A. Les données sur les monuments (<a href = "../script/traite_monuments.py"> script </a>)</p>
+                                                    <p>Créer la liste de momuments par la main, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson.</p>
+                                                    <p> - Récupérer les noms des momuments à Paris</p>
+                                                    <p> - Éliminer par la main des lieux qui ne sont pas intramuros, etc. Par ex. Les Champs Elysée</p>
+                                                    <p> - Ajouter les coordonnées des monuments en utilisant les API de Open Street Maps et GeoNames</p>
+                                                    <p> - Transformation en format geoJson</p>
+                                                    <p> - Transformation en format xml </p>
+                                                    <p> - Établir la grammaire DTD et relaxng</p>
 
-                                                            <p><br>B. Les données pour les films (<a href = "../script/modelis_film.py"> script </a>)</p>
-                                                            <p> Le fichier d'origine est en format XML et finalement, deux fichiers en format xml et un fichier en format Geojson sont générés.</p>
-                                                            <p> - Élinimer les noeuds films qui n'ont pas les coordonnées</p>
-                                                            <p> - Séparer les coordonées en deux noeuds</p>
-                                                            <p> - Eliminer les lieux de tournage qui ne sont proches à aucun monument (<a href = "../script/filter_new.py"> script </a>)</p>
-                                                            <p> - Ajouter le nom du monument comme un nouveau noeud du noeud film restant et ajouter "type_radius" comme l'attribut (<a href = "../script/filter_new.py"> script </a>)</p>
-                                                            <p> - Transformation en Geojson (<a href = "../script/geojson_film.py"> script </a>)</p>
+                                                    <p><br>B. Les données pour les films (<a href = "../script/modelis_film.py"> script </a>)</p>
+                                                    <p> Le fichier d'origine est en format XML et finalement, deux fichiers en format xml et un fichier en format Geojson sont générés.</p>
+                                                    <p> - Élinimer les noeuds films qui n'ont pas les coordonnées</p>
+                                                    <p> - Séparer les coordonées en deux noeuds</p>
+                                                    <p> - Eliminer les lieux de tournage qui ne sont proches à aucun monument (<a href = "../script/filter_new.py"> script </a>)</p>
+                                                    <p> - Ajouter le nom du monument comme un nouveau noeud du noeud film restant et ajouter "type_radius" comme l'attribut (<a href = "../script/filter_new.py"> script </a>)</p>
+                                                    <p> - Transformation en Geojson (<a href = "../script/geojson_film.py"> script </a>)</p>
 
-                                                            <p><br>C. Les données sur le genre et le pays d'origine du film (<a href = "../script/get_info_films.py"> script </a>)</p>
-                                                            <p>Le fichier sortie est en format xml</p>
-                                                            <p> - Faire un programme pour récupérer le genre et le pays d'origine du film qui existe dans notre fichier de film en utilisant APIs</p>	
+                                                    <p><br>C. Les données sur le genre et le pays d'origine du film (<a href = "../script/get_info_films.py"> script </a>)</p>
+                                                    <p>Le fichier sortie est en format xml</p>
+                                                    <p> - Faire un programme pour récupérer le genre et le pays d'origine du film qui existe dans notre fichier de film en utilisant APIs</p><br><br>
+                </div>
+            </div>
+            <!--bouton-->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="resultats.html#page-top" class="btn btn-success btn-lg">PROGRAMMES ET RÉSULTATS</a>
                 </div>
             </div>
         </div>
@@ -180,14 +186,14 @@
                     <p>Commes les données des coordonnées des monuments obtenus initialement sur <a href="http://opendata.paris.fr" target="_blank">http://opendata.paris.fr</a> et sur <a href="http://www.data.gouv.fr" target="_blank">http://www.data.gouv.fr</a> étaient insuffissants, on a du les abandonner et obtenir les coordonnées à travers une API. Cette méthode s'est avéré très rapide et efficace. </p></br>
                     <p>2. Utilisation de modules</p>
                     <p>Nous nous sommes servies de plusieurs modules (<a href="#part4">voir section suivante</a>) pour ce projet. Cela est censé faciliter le travail, mais quand la documentation du module est insuffissante ou n'est pas au jour, on peut rencontrer des problèmes. C'est ce qui s'est passé avec la classe Circle du module 'folium', qu'on voulait utiliser pour projecter des cercles autour des monuments mais qui avait été éliminée du module.</p> 
-                    <p>Nous avons remplacé cette classe par CircleMaker, qui construit des cercles aussi mais il a fallu calculer l'équivalence entre pixels et mètres pour pouvoir s'en servir.</p>
+                    <p>Nous avons remplacé cette classe par CircleMaker, qui construit des cercles aussi mais il a fallu calculer l'équivalence entre pixels et mètres pour pouvoir s'en servir.</p><br/><br/>
                 </div>
             </div>
 
             <!--bouton-->
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="resultats.html#part1" class="btn btn-lg btn-outline">CARTES</a>
+                    <a href="resultats.html#page-top" class="btn btn-lg btn-outline">PROGRAMMES ET RÉSULTATS</a>
                 </div>
             </div>
         </div>
@@ -210,15 +216,19 @@
                     <br/>
                     <h4>Traitement de coordonnées géographiques</h4>
                     <p><a href="https://github.com/geopy/geopy">GeoPy</a></p><br/>
+                    <!-- LIEN API GEONAMES-->
+                    <!-- LIEN API OSM-->
                     <h4>Projection des cartes</h4>
                     <p><a href="https://github.com/python-visualization/folium">Folium</a></p><br/>
-                    <h4>Récupératoin plus d'imfos sur les films</h4>
-                    <p><a href="https://www.omdbapi.com/">OMDb API</a></p>
+                    <h4>Récupération plus d'informations sur les films</h4>
+                    <p><a href="https://www.omdbapi.com/">OMDb API</a></p><br/><br/>
                 </div>
             </div>
-            </div>
-            <div>
-                <!--METTRE LES CARTES ICI-->
+            <!--bouton-->
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2 text-center">
+                    <a href="resultats.html#page-top" class="btn btn-success btn-lg">PROGRAMMES ET RÉSULTATS</a>
+                </div>
             </div>
         </div>
     </section>
@@ -242,7 +252,7 @@
                 </div>
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <a href="resultats.html#part3" class="btn btn-lg btn-outline">RÉSULTAT</a>
+                    <a href="resultats.html#part3" class="btn btn-lg btn-outline">PROGRAMMES ET RÉSULTATS</a>
                 </div>
             </div>
             </div>
