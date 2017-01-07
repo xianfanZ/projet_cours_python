@@ -25,7 +25,7 @@ def get_info_film(fichier):
 		rel = tree.xpath("//film/Realisateur") 
 		for titre, realisateur in zip(ti, rel):
 			films.append( (titre.text, realisateur.text) )
-		print("Obtention du genre et du pays d'origine depuis OMBD...")
+		print("Collecte des données depuis OMBD...")
 		genres= [] #liste de genres de tous les tournages
 		payss= [] #liste de pays de tous les tournages
 		# requete sur OMDB pour obtenir plus d'infos sur chaque film
@@ -56,10 +56,9 @@ def ajoute_newinfo(liste1, liste2):
 	Sortie: modélisation xml pour les tournages avec info de genre et de pays
 	"""
 	# tournages proches d'un monument
-	print("Modélisation des informations obtenues en xml...")
 	entree = open("../xml/filter_coord_films_new.xml", "r")
 	# nouveau fichier xml avec infos de genre et pays
-	sortie = "../xml/films_genre_pays.xml"
+	sortie = open("../xml/films_genre_pays.xml", "w")
 	tree = etree.parse(entree)
 	# ajout de nouvelles infos à chaque tournage
 	node_films = tree.xpath("/tournagesdefilmsparis2011/film")
@@ -71,12 +70,14 @@ def ajoute_newinfo(liste1, liste2):
 	tree.write(sortie)
 	entree.close()
 	sortie.close()
-	print("Voir résultat sur 'filter_coord_films_new.xml'")
 
 
 def main():
+	print("Obtention du genre et du pays d'origine des tournages")
 	g, p = get_info_film("../xml/filter_coord_films_new.xml") # Obtention des infos pour les tournages proches d'un monument
+	print("Modélisation des informations obtenues en xml")
 	ajoute_newinfo(g, p)
+	print("Voir résultat sur 'filter_genre_pays.xml'")
 
 if __name__ == '__main__':
 	main()
