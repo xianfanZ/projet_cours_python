@@ -123,17 +123,13 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
 					<h4>Données d'origine</h4>
-					<p><br>Il y a trois sources principales pour nos données d'origine: </p>
-                    <p>1. <a href="http://opendata.paris.fr" target="_blank">http://opendata.paris.fr</a><p>
-                    <p>2. <a href="http://www.data.gouv.fr" target="_blank">http://www.data.gouv.fr</a><p>
-                    <p>3. <a href="https://www.omdbapi.com" target="_blank">https://www.omdbapi.com</a><p>                                                 
-
+					<p><br>Il y a deux sources principales pour nos données d'origine: </p>
+                    			<p>1. <a href="http://opendata.paris.fr" target="_blank">http://opendata.paris.fr</a><p>
+                    			<p>2. <a href="https://www.omdbapi.com" target="_blank">https://www.omdbapi.com</a><p>                                                
 					<p>Toutes les donées sur ces sites sont "open sources" et on peut faire le text mining sur ces donées légalement.<br></p>
-					<p>Les données sur le site de "OMDB" sont été récupérées en utilisant APIs. Celles sur les autres deux sites sont déjà modélisées en plusieurs formats :</p>
-                                                    <p><a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a><p>
-                                                    <p><a href="https://www.data.gouv.fr/fr/datasets/monuments-historiques-francais-1/" target="_blank">monuments.json</a><p>
-                                                    <p><a href="http://www.data.gouv.fr/fr/datasets/liste-des-coordonnees-gps-des-monuments-nationaux/" target="_blank">Ressource sans nom.ods</a><p>
-                                                    <p>Pour le fichier contenant la liste de monuments, on le fait par la main et les noms des monuments sont trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>et le fichier momument est <a href="../data/liste_de_monuments.txt" target="_blank">liste_de_monuments.txt.</a><p>
+					<p>Les données sur le site de "OMDB" sont été récupérées en utilisant APIs. Celles sur l'autre site sont déjà modélisées en plusieurs formats et on a choisi le fichier en format XML.</p>
+                                        <p><a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a><p>                                                
+                                        <p>Pour le fichier contenant la liste de monuments, on l'a fait par la main et les noms des monuments sont trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>et le fichier momument est <a href="../data/liste_de_monuments.txt" target="_blank">liste_de_monuments.txt.</a><p>
 					<h4><br>Traitements</h4>
                                                     <p>A. Les données sur les monuments (<a href = "../script/traite_monuments.py"> script </a>)</p>
                                                     <p>Créer la liste de momuments par la main, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson.</p>
@@ -153,7 +149,7 @@
                                                     <p> - Transformation en Geojson (<a href = "../script/geojson_film.py"> script </a>)</p>
 
                                                     <p><br>C. Les données sur le genre et le pays d'origine du film (<a href = "../script/get_info_films.py"> script </a>)</p>
-                                                    <p>Le fichier sortie est en format xml</p>
+                                                    <p>Le fichier sorti est en format xml</p>
                                                     <p> - Faire un programme pour récupérer le genre et le pays d'origine du film qui existe dans notre fichier de film en utilisant APIs</p><br><br>
                 </div>
             </div>
