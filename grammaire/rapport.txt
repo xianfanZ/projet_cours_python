@@ -1,5 +1,15 @@
-Résultat de la validation du document xml 
+Résultat de la validation des documents xml avec xmllint
 
-xmllint xml/film_final.xml --noout --relaxng grammaire/film_final.rng
+Relax NG :
+
+$ xmllint xml/film_final.xml --noout --relaxng grammaire/film_final.rng
 xml/film_final.xml validates
+
+$ xmllint xml/filter_coord_films.xml --noout --relaxng grammaire/film_final.rng
+xml/filter_coord_films.xml validates
+
+$ xmllint xml/monuments_coord.xml --noout --relaxng grammaire/monuments_coord.rng
+xml/monuments_coord.xml validates
+
+DTD :
 
