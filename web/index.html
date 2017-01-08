@@ -128,12 +128,16 @@
                     <p>2. <a href="http://www.openstreetmap.org" target="_blank">www.openstreetmap.org</a> pour les monuments<p>
                     <p>3. <a href="https://www.omdbapi.com" target="_blank">www.omdbapi.com</a> pour des informations extra sur les tournages<p><br>
                     <p>Toutes les donées sur ces sites sont "open source" et on peut faire le data mining sur ces donées légalement.</p>
-                    <p> Les données sur les tournages sont déjà modélisées en plusieurs formats. Nous avons choisi la modélisation xml <a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a>.</p><br>
-                    <p>Les données des monuments ont été récupérées en utilisant l'API d'Open Street Maps. Nous avons définie manuellement une <a href="../data/liste_de_monuments.txt" target="_blank">liste de monuments</a> à partir des monuments trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">"monumentdeparis"</a>. Pour les difficultés rencontrées pour l'obtention des données des monuments, voir la section <a href="#part3">Méthodes</a>.</p>
+                    <p> Les données sur les tournages sont déjà modélisées en plusieurs formats. Nous avons choisi la modélisation <a href=http://opendata.paris.fr/explore/dataset/tournagesdefilmsparis2011/ target="_blank">tournagesdefilmsparis2011.xml</a>.</p><br>
+                    <p>Les données des monuments ont été récupérées en utilisant l'API d'Open Street Maps. Nous avons définie manuellement une <a href="../data/liste_de_monuments.txt" target="_blank">liste de monuments</a> à partir des critères suivants:</p>
+                    <p>- Caractère touristique du monument (choix basé sur les monuments trouvés sur le site <a href="http://monumentsdeparis.net" target="_blank">monumentdeparis.net</a>).</p>
+                    <p>- Présence sur la liste des monuments nationaux</p>
+                    <p>- Possibilité de projection de son espace d'influence sous forme de cercle (pas d'avenues ou de rues célèbres)</p> 
+                    <p>Pour les difficultés rencontrées pour l'obtention des données des monuments, voir la section <a href="#part3">Méthodes</a>.</p>
                     
                     <h4><br>Traitements</h4>
-                                                    <p>A. Les données sur les monuments (<a href = "../script/traite_monuments.py"> script </a>)</p>
-                                                    <p>Créer la liste de monuments par la main, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson. Étapes :</p>
+                                            <p>A. Les données sur les monuments (<a href = "../script/traite_monuments.py"> script </a>)</p>
+                                                    <p>Créer la liste de monuments, ajouter les coordonées et rendre deux fichiers dont l'un est en format xml et l'autre est en geoJson. Étapes :</p>
                                                     <p> - Récupérer les noms des monuments à Paris</p>
                                                     <p> - Éliminer par la main des lieux qui ne sont pas intramuros. Par ex. Marché de Rungis</p>
                                                     <p> - Ajouter les coordonnées des monuments en utilisant les API de Open Street Maps et GeoNames</p>
@@ -141,16 +145,16 @@
                                                     <p> - Modélisation en format xml </p>
                                                     <p> - Établir la grammaire DTD et relaxng</p>
 
-                                                    <p><br>B. Les données sur les tournages (<a href = "../script/modelis_film.py"> script </a>)</p>
+                                            <p><br>B. Les données sur les tournages (<a href = "../script/modelis_film.py"> script </a>)</p>
                                                     <p> Le fichier d'origine est en format XML et finalement, deux fichiers en format xml et un fichier en format Geojson sont générés. Étapes :</p>
-                                                    <p> - Élimineer les noeuds films qui n'ont pas les coordonnées</p>
+                                                    <p> - Éliminer les noeuds 'film' qui n'ont pas de coordonnées</p>
                                                     <p> - Séparer les coordonées en deux noeuds</p>
-                                                    <p> - Éliminer les lieux de tournage qui ne sont proches d'aucun monument (<a href = "../script/filter_new.py"> script </a>)</p>
+                                                    <p> - Éliminer les lieux de tournage qui ne sont proches d'aucun monument. Perte de 21% des tournages (<a href = "../script/filter_new.py"> script </a>)</p>
                                                     <p> - Ajouter le nom du monument proche comme un nouveau noeud du noeud film restant et ajouter "type_radius" comme l'attribut (<a href = "../script/filter_new.py"> script </a>)</p>
                                                     <p> - Transformation en Geojson (<a href = "../script/geojson_film.py"> script </a>)</p>
 
-                                                    <p><br>C. Les données sur le genre et le pays d'origine du film (<a href = "../script/get_info_films.py"> script </a>)</p>
-                                                    <p> - Faire un programme pour récupérer le genre et le pays d'origine du film qui existe dans notre fichier de film en utilisant APIs</p>
+                                            <p><br>C. Les données sur le genre et le pays d'origine du film (<a href = "../script/get_info_films.py"> script </a>)</p>
+                                                    <p> - Faire un programme pour récupérer le genre et le pays d'origine des films filtrés par proximité en utilisant APIs</p>
                                                     <p>Ajouter ces informations comme deux noeuds supplémentaires dans l'arbre xml de tournages</p><br><br>
                 </div>
             </div>
@@ -249,11 +253,14 @@
             <div class="row">
                 <div class="col-lg-10 col-lg-offset-1">
                     <br/><br/><h4>Analyse du tableau</h4>
-                    <p> 1. Selon le tableau, on peut dire qu'il y a une corrélation entre la réputation du monument et le choix du lieu de tournage. </p>
-                    <p>Les tops huit monuments les plus aimés pour tourner les films sont Notre-Dame de Paris, Sacré-Coeur, Tour Eiffel, Opéra Garnier, Canal Saint Martin, Pont Alexandre III, Pont des Arts, Moulin Rouge. Ce sont des monuments très connus dans le monde entier. Surtout les tops trois, ce sont les représentants de Paris. Et les monuments ayant moins de lieux de tournage autours sont généralement moins connus au monde.</p>
-                    <p>2. Mais il y a quand même des points innatendus dans le résultat. Par ex., Musée d'Orsay et Palais d'Elysée sont très connus au public. Mais ils ont un poucentage très bas. C'est parce que sauf la réputation du monument, il y a d'autres facteurs qui infuencent le choix. Par ex., comme la Palais d'Elysée n'ouvre pas au public dans la plupart du temps et on ne voit pas de grande chose en dehors de la palais, ce n'est pas étonnant qu'on ne le choisit pas souvent comme le lieu de tournage.</p>
-                    <p>3. On a aussi classé les monuments selon leur superface. Bien que ce ne soit pas évident, on peut quand même remarqué que les monuments qui ont la surface la plus petite ont tendance d'avoir moins de lieux de tournage qui sont autours d'eux. Cependant, on peut aussi penser que cette remarque n'est pas pertinente, car cette remarque n'est pas générale. Par ex., le Jardin des Plantes a une surface assez grande, mais peu de films ont été tournés là-bas. </p>
-                    <p>4. On a en total 6804 lieux de tournage avant le filtrage. Après avoir éliminer les lieux de tournage qui ne sont pas proches à aucun monument, il nous en reste 1483. C'est-à-dire que presque 80% de lieux de tournage ne sont pas proches à un monument selon nos critères. En supposant que nos critères sont pertinents(ils ont été choisis en prenant beaucoup de facteurs en compte), on peut dire que où se trouvent les monuments n'a pas une influence évidente sur le choix du tournage de films.</p>
+                    <p><b>1. Réputation du monument</b></p>
+                        <p>Selon le tableau, il y a une corrélation entre la réputation du monument et le choix du lieu de tournage. Les tops huit monuments préférés pour tourner des films sont Notre-Dame de Paris, Sacré-Coeur, Tour Eiffel, Opéra Garnier, Canal Saint Martin, Pont Alexandre III, Pont des Arts et Moulin Rouge. Ce sont des monuments très connus dans le monde entier. Surtout les tops trois, ce sont les représentants de Paris. Les monuments ayant moins de tournages autour sont généralement moins connus au monde.</p>
+                    <p><b>2. Points innatendus</b></p>
+                        <p>Pourquoi la Tour Eiffel n'est pas en premier lieu ? Pourquoi le pourcentage du Musée du Louvre, du Musée d'Orsay et du Palais d'Elysée est très bas ? Des facteurs autres que la réputation du monument peuvent conditionner le choix. Des mesures de sécurité pour le Palais d'Elysée, des droits d'image pour le Louvre et l'utilisation d'images d'archives pour Orsay et la Tour Eiffel peuvent être des possibles explications.</p>
+                    <p><b>3. Surface d'influence</b> </p>
+                        <p>Les monuments ont été classés selon leur surface. Intuitivement, on peut penser que le nombre de tournages est proportionnel à la surface d'influence. Cependant, cette règle n'est pas générale. Le Jardin des Plantes, par exemple, a une surface importante mais peu de films y ont été tournés. </p>
+                    <p><b>4. Hypothèse non confirmée</b></p>
+                        <p>Au départ, on comptait un total de 6804 lieux de tournage. Après avoir éliminé les lieux de tournage qui ne sont proches d'aucun monument, il en reste 1483. C'est-à-dire que presque 80% de lieux de tournage ne sont proches d'aucun monument selon nos critères. En supposant que nos critères sont pertinents, notre hypothèse de départ n'a pas été confirmée : les monuments n'ont pas une influence évidente sur le choix du lieu de tournage des films.</p>
                 </div>
             </div>
         </div>
@@ -265,12 +272,12 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-6">
-                        <h3>Lieu</h3>
-                        <p>INALCO<br>Institut National des Langues Orientales<br>2 Rue de Lille<br>Paris, 75007</p>
+                        <h3>M2 TAL IM</h3>
+                        <p>Institut National des Langues Orientales<br>2 Rue de Lille<br>Paris, 75007</p>
                     </div>
                     <div class="footer-col col-md-6">
-                        <h3>A propos</h3>
-                        <p>Nidia Hernández<br>Yizhe Wang<br>Xianfan Zhang</p>
+                        <h3>Équipe</h3>
+                        <p>Nidia Hernández - nidiahy@gmail.com<br>Yizhe Wang - wangyizhe0201@gmail.com<br>Xianfan Zhang - zxfan.fiona@gmail.com</p>
                     </div>
                 </div>
             </div>

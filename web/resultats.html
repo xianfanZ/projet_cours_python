@@ -98,8 +98,9 @@
                 <div class="col-lg-12 text-center">
                     <h2 class="section-heading">Carte 1</h2>
                     <hr class="star-light">
-                    <p><br>La carte ci-dessous (cliquez sur l'image pour zoomer) présente les monuments parisiens les plus représentatifs de Paris (<a href="../data/liste_de_monuments.txt">voir liste</a>) et tous les tournages de films réalisés à Paris entre l'année 2002 et l'année 2010.</p>
-                    <p><br>Elle a été obtenu grâce au programme <a href="../script/project_carte.py">project_carte.py</a></p><br>
+                    <p><br>La carte ci-dessous (cliquez sur l'image pour zoomer) présente les monuments parisiens les plus représentatifs de la ville (<a href="../data/liste_de_monuments.txt">voir liste</a>) et tous les tournages de films réalisés à Paris entre l'année 2002 et l'année 2010.</p>
+                    <p><br>Elle est construite à partir des <a href="../xml/monuments_coord.xml">informations des monuments</a> obtenues avec <a href="../script/traite_monuments.py">ce script</a> et les <a href="../xml/films_final.xml">informations des tournages</a> obtenues avec <a href="../script/enlever_sans_coord_film.py">ce script</a> et <a href="../script/modelis_coor_film.py">ce script</a>.
+                    <p><br>La projection sur la carte a été élaborée à travers le programme <a href="../script/project_carte.py">project_carte.py</a></p><br>
                 </div>
             </div>
 			<div class="row">
@@ -127,7 +128,7 @@
                     <h2 class="section-heading">Carte 2</h2>
                     <hr class="star-primary">
                     <p><br>Cette autre carte présente les tournages de films réalisés à proximité d'un monument.</p><br>
-                    <p>Ici, nous avons pris en considération les films tournées à moins de 500m d'un monument. Ce filtrage a été effectué avec le programme <a href="../script/filter_new.py">filter_new.py</a></p><br>
+                    <p>Ici, nous avons pris en considération les <a href="../xml/filter_coord_films.xml">films tournées à moins de 500m</a> d'un monument. Ce filtrage a été effectué avec le programme <a href="../script/filter_new.py">filter_new.py</a></p><br>
                 </div>
             </div>
             <div class="row">
@@ -181,10 +182,12 @@
             <div class="container">
                 <div class="row">
                     <div class="footer-col col-md-6">
-                        <p>INALCO<br>Institut National des Langues Orientales<br>2 Rue de Lille<br>Paris, 75007</p>
+                        <h3>M2 TAL IM</h3>
+                        <p>Institut National des Langues Orientales<br>2 Rue de Lille<br>Paris, 75007</p>
                     </div>
                     <div class="footer-col col-md-6">
-                        <p>M2 TAL IM<br>Nidia Hernández<br>Yizhe Wang<br>Xianfan Zhang</p>
+                        <h3>Équipe</h3>
+                        <p>Nidia Hernández - nidiahy@gmail.com<br>Yizhe Wang - wangyizhe0201@gmail.com<br>Xianfan Zhang - zxfan.fiona@gmail.com</p>
                     </div>
                 </div>
             </div>
