@@ -11,5 +11,17 @@ xml/filter_coord_films.xml validates
 $ xmllint xml/monuments_coord.xml --noout --relaxng grammaire/monuments_coord.rng
 xml/monuments_coord.xml validates
 
+
+Résultat de la validation avec Oxygen 
+
 DTD :
 
+film_final.xml avec film_final.dtd		Document is valid
+
+filter_coord_films.xml film_final.dtd		Document is valid
+
+filter_coord_films_new.xml avec filter_coord_films_new.dtd	Document is valid
+
+films_genre_pays.xml avec films_genre_pays.dtd		Document is valid
+
+monuments_coord.xml avec monuments_coord.dtd		Document is valid
