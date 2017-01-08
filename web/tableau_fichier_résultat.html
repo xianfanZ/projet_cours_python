@@ -1,0 +1,35 @@
+<!DOCTYPE html SYSTEM "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head><title>Tableau récapitulatif</title><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><link rel="stylesheet" type="text/css" href="./css/table.css"/></head>
+    <body><div class="ficheResult" align="center"><h2>Fiche récapitulative des fichiers obtenus</h2><table class="table_result">
+            <tr>
+                <th>fichier d'obtenu</th><th>script</th><th>description</th>
+            </tr>
+            <tr>
+                <td><a href="../xml/monuments_coord.xml">monuments_coord.xml</a></td><td><a href="../script/traite_monuments.py">traite_monuments.py</a></td><td>monuments avec poids (attribut "espace") et géocoordonnées</td>
+            </tr>
+            <tr>
+                <td><a href="../xml/film_changed.xml">film_changed.xml</a></td><td><a href="../script/enlever_sans_coord_film.py">enlever_sans_coord_film.py</a></td><td>information des tournages nettoyée (élimination films sans géolocalisation)</td>
+            </tr>
+            <tr>
+                <td><a href="../xml/film_final.xml">film_final.xml</a></td><td><a href="../script/modelis_film.py">enlever_sans_coord_film.py</a></td><td>information des tournages modélisée (données des coordonnées divisées en deux éléments différents)</td>
+            </tr>
+            <tr>
+                <td><a href="../xml/filter_coord_films.xml">filter_coord_films.xml</a></td><td><a href="../script/filter_new.py">filter_new.py</a></td><td>tournages filtrés (élimination des films qui ne sont pas proches d'un monument)</td>
+            </tr>
+            <tr>
+                <td><a href="../xml/filter_coord_films_new.xml">filter_coord_films_new.xml</a></td><td><a href="../script/filter_new.py">filter_new.py</a></td><td>ajout information du monument le plus proche.</td>
+            </tr>
+            <tr>
+                <td><a href="../xml/films_genre_pays.xml">films_genre_pays.xml</a></td><td><a href="../script/get_info_film.py">get_info_film.py</a></td><td>ajout information supplémentaire sur les tournages (genre et pays d'origine)</td>
+            </tr>
+            <tr>
+                <td><a href="../json/film.geojson">film.geojson (obsolète)</a></td><td><a href="../script/geojson_film.py">geojson_film.py</a></td><td>géocoordonnées des tournages de films à Paris. Abandonné pour modélisation en xml.</td>
+            </tr>
+            <tr>
+                <td><a href="../json/monuments.geojson">monuments.geojson (obsolète)</a></td><td><a href="../script/traite_monuments.py">traite_monuments.py</a></td><td>géocoordonnées des monuments choisis. Abandonné pour monuments_coord.xml</td>
+            </tr>
+        </table>
+    </div>
+    </body>
+</html>
