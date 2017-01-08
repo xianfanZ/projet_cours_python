@@ -1,1 +1,16 @@
-Résultat de la validation du document xml 
+Résultat de la validation bonne formation des documents xml en Oxygen (Check Well-Formedness):
+
+film_changed.xml		Document is well formed
+
+film_final.xml			Document is well formed
+
+filter_coord_films.xml		Document is well formed
+
+filter_coord_films_new.xml	Document is well formed
+
+films_genre_pays.xml		Document is well formed
+
+monuments_coord.xml		Document is well formed
+
+
+

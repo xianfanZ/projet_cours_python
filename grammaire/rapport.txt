@@ -2,3 +2,4 @@ Résultat de la validation du document xml
 
 xmllint xml/film_final.xml --noout --relaxng grammaire/film_final.rng
 xml/film_final.xml validates
+

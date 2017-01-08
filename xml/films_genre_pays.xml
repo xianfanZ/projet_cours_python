@@ -1,4 +1,4 @@
-<!DOCTYPE tournagesdefilmsparis2011 SYSTEM "../grammaire/films_genre_apys.dtd">
+<!DOCTYPE tournagesdefilmsparis2011 SYSTEM "../grammaire/film_genre_pays.dtd">
 <tournagesdefilmsparis2011>
   <film id="1">
     <Titre>DEMAIN, A L'AUBE</Titre>
