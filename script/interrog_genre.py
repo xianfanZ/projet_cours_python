@@ -5,7 +5,7 @@
 # Usage : python3 interrog.py
 # Installer 
 # Données source : film_genre_pays.xml
-# Résultat : stats
+# Résultat : genre préféré par monument
 
 from lxml import etree
 
