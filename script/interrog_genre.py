@@ -37,7 +37,13 @@ def mk_dico_monument_genre(fichier):
 def main():
 	dico = mk_dico_monument_genre("/Users/nidiahernandez/Desktop/projet_cours_python/xml/films_genre_pays.xml")
 	for key in dico:
-		print("Monument : {} \n Genres : {}".format(key, dico[key]))
+		sorted_k = sorted(dico[key], key=(dico[key]).get, reverse=True)
+		print("Monument : {}".format(key))
+		try:
+			sorted_k[0] == "N/A"
+			print("Genre péféré: {}".format(sorted_k[1]))
+		except:
+			print("Genre péféré: {}".format(sorted_k[0]))
 
 if __name__ == '__main__':
 	main()
