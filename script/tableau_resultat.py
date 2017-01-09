@@ -12,7 +12,7 @@ import traite_monuments,math,interrog_genre
 tree = etree.parse("../xml/filter_coord_films_new.xml")
 dico_monuments = {}
 dico_espace_monuments = traite_monuments.my_monuments_dico("../data/liste_de_monuments.txt")
-dico_genre_prefere = interrog_genre.mk_dico_genre_prefere("../xml/films_genre_pays.xml")
+dico_genre_prefere = interrog_genre.mk_dico_genre_prefere(interrog_genre.mk_dico_monument_genre("../xml/films_genre_pays.xml"))
 
 for elem in tree.iter(tag='Monument_proche'):
     dico_monuments[elem.text] = dico_monuments.get(elem.text,0)+1
