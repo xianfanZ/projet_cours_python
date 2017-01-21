@@ -5,6 +5,9 @@ from lxml import etree
 import collections
 import pandas as pd
 
+# Classer les données par année et présenter le résultat par un tableau
+# Données source : filter_coord_films_new.xml
+# Résultat : table_classe_annee
 def parser():
 
     """parser le fichier ilter_coord_films_new.xml et créer un dico 
