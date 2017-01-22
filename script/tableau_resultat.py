@@ -6,9 +6,10 @@
 # Résultat : ../web/tableu.html
 
 from lxml import etree
-import traite_monuments,math,interrog_genre
+import traite_monuments,math,interrog_genre,table_classe_annee
 import pandas as pd
-import matplotlib.pyplot as plt
+
+
 
 niv_espace = {
     "standard" : 11341,
@@ -159,10 +160,13 @@ def sortie_tableau():
     return
 
 
+
 def main():
     print(modelis_donnee())
     print("Écriture du tableau!")
-    sortie_tableau()
+    #sortie_tableau()
+
+
 
 if __name__ == '__main__':
     main()

@@ -60,6 +60,9 @@ def mk_chart_fr_etr(dico):
 	plt.show()
 	
 
+
+
+
 def main():
 	dico_filtre = mk_dico_monument_pays_filtre("xml/films_genre_pays.xml")
 	print("Construction chart tournages français/étranger")

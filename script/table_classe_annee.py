@@ -4,6 +4,8 @@
 from lxml import etree
 import collections
 import pandas as pd
+import matplotlib.pyplot as plt
+
 
 # Classer les données par année et présenter le résultat par un tableau
 # Données source : filter_coord_films_new.xml
@@ -101,17 +103,53 @@ def parser():
     return (dico_monument)
 
 
+
+
 def table():
 
     """créer ke tableau à base du dico obtenu par la fonction parser"""
 
     a = parser()
     df = pd.DataFrame(data=a)
-    df = df.fillna(' ').T
+    df = df.fillna(0).T
+    for y in range(2002,2011):
+        df[y] = df[y].astype(int)
     print (df.to_html())
+    return df
 
-table()
+def mk_figure_nb_tournage_annee(listMonuments,dataframe):
+    fig, ax = plt.subplots()
+    fig.canvas.draw()
+    ax.set_xticklabels(range(2002,2011))
+    for idx, row in dataframe.iterrows():
+        if idx in listMonuments:
+            print(idx,row.index.values,row.values)
+            plt.plot(row.index.values,row.values,label=idx)
+            plt.legend(loc='upper center', bbox_to_anchor=(0.5,-0.02),fancybox=True, shadow=True, ncol=5)
+            #plt.xlabel('Années')
+            plt.ylabel('Nb de tournages')
+    return plt
 
+
+def main():
+    table()
+    df = table()
+    plt1 = mk_figure_nb_tournage_annee(["Grand Palais","Opéra Garnier","Palais de l'Élysée"],df)
+    plt1.savefig("../web/img/figure_line_1.png")
+    plt1.show()
+    plt2 = mk_figure_nb_tournage_annee(['Bibliothèque François Mitterrand', 'Café de Flore', 'Centre Pompidou', 'Gare de Lyon de Paris', 'Hôtel de Ville', 'Moulin Rouge', "Musée d'Orsay", 'Palais Royal', 'Panthéon', 'Place de la Bastille', 'Place de la Concorde', 'Place des Vosges', 'Place Vendôme', 'Pont des Arts', 'Pont Neuf', 'Pont Alexandre III', 'Pont de l’Alma', 'Tour Saint Jacques', 'Université la Sorbonne Paris'],df)
+    plt2.savefig("../web/img/figure_line_2.png")
+    plt2.show()
+    plt3 = mk_figure_nb_tournage_annee(['Cimetière du Père Lachaise', 'Jardin des Plantes', 'Tour Eiffel'],df)
+    plt3.savefig("../web/img/figure_line_3.png")
+    plt3.show()
+    plt4 = mk_figure_nb_tournage_annee(['Arc de Triomphe', 'Canal Saint Martin', 'Invalides', 'Jardin du Luxembourg', 'Musée du Louvre', 'Notre-Dame de Paris', 'Sacré-Coeur', 'Tour Montparnasse'],df)
+    plt4.savefig("../web/img/figure_line_4.png")
+    plt4.show()
+    
+
+if __name__ == '__main__':
+    main()
 
 
 
