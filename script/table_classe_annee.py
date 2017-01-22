@@ -26,7 +26,7 @@ def parser():
     list_monument_2009 = []
     list_monument_2010 = []
     tree = etree.parse(
-        "/Users/wangyizhe/Desktop/projetPy/filter_coord_films_new.xml")
+        "../xml/filter_coord_films_new.xml")
     nodes_date = tree.xpath(
         "/tournagesdefilmsparis2011/film/Date_Debut_Evenement")
     for date in nodes_date:
