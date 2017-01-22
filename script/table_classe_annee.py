@@ -134,19 +134,10 @@ def mk_figure_nb_tournage_annee(listMonuments,dataframe):
 def main():
     table()
     df = table()
-    plt1 = mk_figure_nb_tournage_annee(["Grand Palais","Opéra Garnier","Palais de l'Élysée"],df)
-    plt1.savefig("../web/img/figure_line_1.png")
-    plt1.show()
-    plt2 = mk_figure_nb_tournage_annee(['Bibliothèque François Mitterrand', 'Café de Flore', 'Centre Pompidou', 'Gare de Lyon de Paris', 'Hôtel de Ville', 'Moulin Rouge', "Musée d'Orsay", 'Palais Royal', 'Panthéon', 'Place de la Bastille', 'Place de la Concorde', 'Place des Vosges', 'Place Vendôme', 'Pont des Arts', 'Pont Neuf', 'Pont Alexandre III', 'Pont de l’Alma', 'Tour Saint Jacques', 'Université la Sorbonne Paris'],df)
-    plt2.savefig("../web/img/figure_line_2.png")
-    plt2.show()
-    plt3 = mk_figure_nb_tournage_annee(['Cimetière du Père Lachaise', 'Jardin des Plantes', 'Tour Eiffel'],df)
-    plt3.savefig("../web/img/figure_line_3.png")
-    plt3.show()
-    plt4 = mk_figure_nb_tournage_annee(['Arc de Triomphe', 'Canal Saint Martin', 'Invalides', 'Jardin du Luxembourg', 'Musée du Louvre', 'Notre-Dame de Paris', 'Sacré-Coeur', 'Tour Montparnasse'],df)
-    plt4.savefig("../web/img/figure_line_4.png")
-    plt4.show()
-    
+    plt = mk_figure_nb_tournage_annee(["Notre-Dame de Paris","Sacré-Coeur","Tour Eiffel"],df)
+    plt.savefig("../web/img/figure_line.png")
+    plt.show()
+
 
 if __name__ == '__main__':
     main()
