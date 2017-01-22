@@ -34,9 +34,9 @@ def mk_dico_monuments(nomfichier):
 
 def traite_valeur_vide(liste_monuments,mon_dico):
     """
-
-    :param mon_dico:
-    :return:
+    Ajouter les monuments qui ne sont pas dans un dictionnaire en metant une valeur vide
+    :param un dictionnare qui manque des monuments
+    :return: un nouveau dictionnaire avec tous les monuments dans la liste
     """
     new_dico = {}
     for monument in liste_monuments:
@@ -52,6 +52,7 @@ def modelis_donnee():
     """
     Comninaison des tous les imformation sur les monuments dans un DataFrame
     :return: un DataFrame
+    (obsolète)
     """
     #----------------------------------------------------------------------
     # créer le dictionnare de structure {monument:espace}

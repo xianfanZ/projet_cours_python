@@ -36,9 +36,13 @@ Grammaires de validation pour les documents xml.
 - geojson_film.py (obsolète) 
 - get_info_film.py : obtention de plus d'informations sur les tournages qui sont à proximité des monuments
 - modelis_film.py : modélisation des données des films.
-- project_carte : projection des monuments et des tournages dans une carte OpenStreetMap.
+- project_carte.py : projection des monuments et des tournages dans une carte OpenStreetMap.
+- project_carte_genre.py : projection des monuments et des tournages dans une carte par leurs genres préféres.
 - tableau_resultat.py : construction du tableau de résultats.
 - traite_monuments.py : obtention et modélisation des géocoordonnées des monuments.
+- table_classe_annee.py : obtention er visualisation les infos sur le nb de tournages de chaque monument par année.
+- interrog_genre.py : obtention les infos sur le nb de tournages de chaque monument par genre.
+- interrog_pays.py : obtention er visualisation les infos sur le nb de tournages de chaque monument par pays.
 
 
 /web
