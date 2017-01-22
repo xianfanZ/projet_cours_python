@@ -26,53 +26,53 @@ def parser():
     list_monument_2009 = []
     list_monument_2010 = []
     tree = etree.parse(
-        "../xml/filter_coord_films_new.xml")
+        "/Users/wangyizhe/Desktop/projetPy/filter_coord_films_new.xml")
     nodes_date = tree.xpath(
         "/tournagesdefilmsparis2011/film/Date_Debut_Evenement")
     for date in nodes_date:
         if "2002" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2002.append((monument, 2002))
         if "2003" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2003.append((monument, 2003))
         if "2004" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2004.append((monument, 2004))
         if "2005" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2005.append((monument, 2005))
         if "2006" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2006.append((monument, 2006))
         if "2007" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2007.append((monument, 2007))
         if "2008" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2008.append((monument, 2008))
         if "2009" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2009.append((monument, 2009))
         if "2010" in date.text:
             parent_node = date.getparent()
-            for child in parent_node.iterchildren(tag="Momument_proche"):
+            for child in parent_node.iterchildren(tag="Monument_proche"):
                 monument = child.text
                 list_monument_2010.append((monument, 2010))
     C1 = collections.Counter(list_monument_2002)
