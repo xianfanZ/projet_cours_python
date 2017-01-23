@@ -91,8 +91,8 @@ def mk_chart_france(dico):
 
 def main():
 	dico_filtre = mk_dico_monument_pays_filtre("xml/films_genre_pays.xml")
-	"""print("Construction chart tournages français/étranger")
-	mk_chart_fr_etr(dico_filtre)"""
+	print("Construction chart tournages français/étranger")
+	mk_chart_fr_etr(dico_filtre)
 	print("Construction chart tournages français/co-productions françaises")
 	mk_chart_france(dico_filtre)
 
