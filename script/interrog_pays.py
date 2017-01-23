@@ -43,11 +43,11 @@ def mk_chart_fr_etr(dico):
 	for key in sorted(dico):
 		if "France" not in key:
 			if key != "N/A":
-				notfr+=dico[key]
+				notfr+=len(dico[key])
 			else:
-				na+=dico[key]
+				na+=len(dico[key])
 		else:
-			fr+=dico[key]
+			fr+=len(dico[key])
 	labels = ["France", "Étrangère", "N/A"]
 	t = notfr+na+fr
 	sizes = [fr*100/t, notfr*100/t, na*100/t]
@@ -57,16 +57,44 @@ def mk_chart_fr_etr(dico):
 	        shadow=True, startangle=90)
 	ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
 
-	plt.show()
+	ax1.set_title("Tournages proches des monuments selon pays d'origine", fontsize=20)
 	
+	plt.show()
 
+def mk_chart_france(dico):
+	"""
+	Construit un pie chart de tournages français et co-productions françaises
+	arg: dictionnaire de tournages par pays
+	"""
+	di = {"France":0, "Co-production française":0}
+	# Obtention des données pour le graphique
+	for key in sorted(dico):
+		if key == "N/A":
+			pass
+		elif "France" not in key:
+			pass
+		elif "France" == key:
+			di["France"]=len(dico[key])
+		else:
+			di["Co-production française"]+=len(dico[key])
+	total = di["France"] + di["Co-production française"]
+	sizes = [ di["France"]*100/total , di["Co-production française"]*100/total ]
+	labels = ["France", "Co-production française"]
+	# Construction du graphique
+	fig1, ax1 = plt.subplots()
+	ax1.pie(sizes, labels=labels, autopct='%1.1f%%',
+	        shadow=True, startangle=90)
+	ax1.axis('equal')  # Equal aspect ratio ensures that pie is drawn as a circle.
+	ax1.set_title("Tournages proches des monuments\nProductions et co-productions françaises", fontsize=20)
 
-
+	plt.show()
 
 def main():
 	dico_filtre = mk_dico_monument_pays_filtre("xml/films_genre_pays.xml")
-	print("Construction chart tournages français/étranger")
-	mk_chart_fr_etr(dico_filtre)
+	"""print("Construction chart tournages français/étranger")
+	mk_chart_fr_etr(dico_filtre)"""
+	print("Construction chart tournages français/co-productions françaises")
+	mk_chart_france(dico_filtre)
 
 
 		
